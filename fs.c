@@ -52,9 +52,9 @@ struct superblock * fs_format(const char *fname, uint64_t blocksize) {
 	}
 
 	struct superblock *sb     = malloc(sizeof *sb);
-	struct inode *rootnode    = malloc(sizeof blocksize);
-	struct nodeinfo *rootinfo = malloc(sizeof blocksize);
-	struct freepage *freepage = malloc(sizeof blocksize);
+	struct inode *rootnode    = malloc(blocksize);
+	struct nodeinfo *rootinfo = malloc(blocksize);
+	struct freepage *freepage = malloc(blocksize);
 
 	rootnode->mode   = IMDIR;
 	rootnode->parent = 1;
@@ -87,6 +87,10 @@ struct superblock * fs_format(const char *fname, uint64_t blocksize) {
 		freepage->count = 0;
 		fs_write_data(sb, i, (void*) freepage);
 	}
+
+	free(rootnode);
+	free(rootinfo);
+	free(freepage);
 
 	if(sb->blks < MIN_BLOCK_COUNT) {
 		close(sb->fd);

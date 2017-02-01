@@ -1,0 +1,648 @@
+fs.c: In function ‘fs_open’:
+fs.c:103:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_get_block’:
+fs.c:120:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_put_block’:
+fs.c:124:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_write_file’:
+fs.c:128:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_read_file’:
+fs.c:132:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_unlink’:
+fs.c:136:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_mkdir’:
+fs.c:140:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_rmdir’:
+fs.c:144:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_list_dir’:
+fs.c:148:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_open’:
+fs.c:103:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_get_block’:
+fs.c:120:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_put_block’:
+fs.c:124:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_write_file’:
+fs.c:128:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_read_file’:
+fs.c:132:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_unlink’:
+fs.c:136:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_mkdir’:
+fs.c:140:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_rmdir’:
+fs.c:144:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_list_dir’:
+fs.c:148:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_open’:
+fs.c:103:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_get_block’:
+fs.c:120:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_put_block’:
+fs.c:124:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_write_file’:
+fs.c:128:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_read_file’:
+fs.c:132:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_unlink’:
+fs.c:136:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_mkdir’:
+fs.c:140:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_rmdir’:
+fs.c:144:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_list_dir’:
+fs.c:148:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_open’:
+fs.c:105:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_get_block’:
+fs.c:122:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_put_block’:
+fs.c:126:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_write_file’:
+fs.c:130:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_read_file’:
+fs.c:134:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_unlink’:
+fs.c:138:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_mkdir’:
+fs.c:142:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_rmdir’:
+fs.c:146:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_list_dir’:
+fs.c:150:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_open’:
+fs.c:105:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_get_block’:
+fs.c:122:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_put_block’:
+fs.c:126:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_write_file’:
+fs.c:130:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_read_file’:
+fs.c:134:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_unlink’:
+fs.c:138:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_mkdir’:
+fs.c:142:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_rmdir’:
+fs.c:146:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_list_dir’:
+fs.c:150:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_open’:
+fs.c:105:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_get_block’:
+fs.c:122:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_put_block’:
+fs.c:126:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_write_file’:
+fs.c:130:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_read_file’:
+fs.c:134:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_unlink’:
+fs.c:138:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_mkdir’:
+fs.c:142:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_rmdir’:
+fs.c:146:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_list_dir’:
+fs.c:150:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_open’:
+fs.c:103:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_get_block’:
+fs.c:120:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_put_block’:
+fs.c:124:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_write_file’:
+fs.c:128:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_read_file’:
+fs.c:132:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_unlink’:
+fs.c:136:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_mkdir’:
+fs.c:140:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_rmdir’:
+fs.c:144:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_list_dir’:
+fs.c:148:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_open’:
+fs.c:103:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_get_block’:
+fs.c:120:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_put_block’:
+fs.c:124:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_write_file’:
+fs.c:128:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_read_file’:
+fs.c:132:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_unlink’:
+fs.c:136:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_mkdir’:
+fs.c:140:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_rmdir’:
+fs.c:144:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_list_dir’:
+fs.c:148:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_open’:
+fs.c:103:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_get_block’:
+fs.c:120:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_put_block’:
+fs.c:124:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_write_file’:
+fs.c:128:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_read_file’:
+fs.c:132:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_unlink’:
+fs.c:136:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_mkdir’:
+fs.c:140:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_rmdir’:
+fs.c:144:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_list_dir’:
+fs.c:148:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_open’:
+fs.c:104:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_get_block’:
+fs.c:121:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_put_block’:
+fs.c:125:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_write_file’:
+fs.c:129:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_read_file’:
+fs.c:133:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_unlink’:
+fs.c:137:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_mkdir’:
+fs.c:141:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_rmdir’:
+fs.c:145:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_list_dir’:
+fs.c:149:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_open’:
+fs.c:104:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_get_block’:
+fs.c:121:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_put_block’:
+fs.c:125:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_write_file’:
+fs.c:129:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_read_file’:
+fs.c:133:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_unlink’:
+fs.c:137:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_mkdir’:
+fs.c:141:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_rmdir’:
+fs.c:145:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_list_dir’:
+fs.c:149:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_open’:
+fs.c:104:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_get_block’:
+fs.c:121:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_put_block’:
+fs.c:125:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_write_file’:
+fs.c:129:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_read_file’:
+fs.c:133:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_unlink’:
+fs.c:137:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_mkdir’:
+fs.c:141:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_rmdir’:
+fs.c:145:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_list_dir’:
+fs.c:149:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_open’:
+fs.c:107:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_get_block’:
+fs.c:124:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_put_block’:
+fs.c:128:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_write_file’:
+fs.c:132:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_read_file’:
+fs.c:136:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_unlink’:
+fs.c:140:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_mkdir’:
+fs.c:144:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_rmdir’:
+fs.c:148:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_list_dir’:
+fs.c:152:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_open’:
+fs.c:107:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_get_block’:
+fs.c:124:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_put_block’:
+fs.c:128:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_write_file’:
+fs.c:132:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_read_file’:
+fs.c:136:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_unlink’:
+fs.c:140:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_mkdir’:
+fs.c:144:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_rmdir’:
+fs.c:148:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_list_dir’:
+fs.c:152:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_open’:
+fs.c:107:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_get_block’:
+fs.c:124:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_put_block’:
+fs.c:128:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_write_file’:
+fs.c:132:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_read_file’:
+fs.c:136:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_unlink’:
+fs.c:140:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_mkdir’:
+fs.c:144:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_rmdir’:
+fs.c:148:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_list_dir’:
+fs.c:152:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_open’:
+fs.c:107:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_get_block’:
+fs.c:124:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_put_block’:
+fs.c:128:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_write_file’:
+fs.c:132:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_read_file’:
+fs.c:136:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_unlink’:
+fs.c:140:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_mkdir’:
+fs.c:144:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_rmdir’:
+fs.c:148:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_list_dir’:
+fs.c:152:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_open’:
+fs.c:107:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_get_block’:
+fs.c:124:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_put_block’:
+fs.c:128:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_write_file’:
+fs.c:132:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_read_file’:
+fs.c:136:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_unlink’:
+fs.c:140:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_mkdir’:
+fs.c:144:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_rmdir’:
+fs.c:148:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_list_dir’:
+fs.c:152:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_open’:
+fs.c:107:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_get_block’:
+fs.c:124:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_put_block’:
+fs.c:128:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_write_file’:
+fs.c:132:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_read_file’:
+fs.c:136:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_unlink’:
+fs.c:140:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_mkdir’:
+fs.c:144:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_rmdir’:
+fs.c:148:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_list_dir’:
+fs.c:152:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
