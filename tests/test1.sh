@@ -3,8 +3,8 @@ set -u
 
 i=1
 
-gcc -g -Wall -c fs.c &>> gcc.log
-gcc -g -Wall -I. tests/test$i.c fs.o -o test$i &>> gcc.log
+gcc -g -std=c99 -Wall -c fs.c &>> gcc.log
+gcc -g -std=c99 -Wall -I. tests/test$i.c fs.o -o test$i &>> gcc.log
 if [ ! -x test$i ] ; then
     echo "[$i] compilation error"
     exit 1 ;

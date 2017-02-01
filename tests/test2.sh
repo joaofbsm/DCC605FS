@@ -3,7 +3,7 @@ set -u
 
 i=2
 
-gcc -g -Wall -I. tests/test$i.c fs.o -o test$i &>> gcc.log
+gcc -g -std=c99 -Wall -I. tests/test$i.c fs.o -o test$i &>> gcc.log
 if [ ! -x test$i ] ; then
     echo "[$i] compilation error"
     exit 1 ;

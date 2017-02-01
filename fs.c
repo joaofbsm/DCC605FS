@@ -9,6 +9,8 @@
 #include <errno.h>
 #include <string.h>
 #include <fcntl.h>
+#include <unistd.h>
+#include <sys/file.h>
 
 #include "fs.h"
 
@@ -19,7 +21,7 @@
 int get_file_size(const char *fname) {
 	int sz;
 	FILE *fd = fopen(fname, "r");
-	fseek(fp, 0L, SEEK_END);
+	fseek(fd, 0L, SEEK_END);
 	sz = ftell(fd);
 	rewind(fd);
 	fclose(fd);
@@ -35,8 +37,8 @@ void fs_write_data(struct superblock *sb, uint64_t pos, void *data) {
 	* 3 - Freelist
 	*/
 
-	lseek(sb->fd, pos * sb->blocksz, SEEK_SET);
-	write(sb->fd, data, sb->blocksz);
+	lseek(sb->fd, pos * sb->blksz, SEEK_SET);
+	write(sb->fd, data, sb->blksz);
 }
 
 /************************
@@ -85,10 +87,6 @@ struct superblock * fs_format(const char *fname, uint64_t blocksize) {
 		freepage->count = 0;
 		fs_write_data(sb, i, (void*) freepage);
 	}
-
-	free(rootnode);
-	free(rootinfo);
-	free(freepage);
 
 	if(sb->blks < MIN_BLOCK_COUNT) {
 		close(sb->fd);
