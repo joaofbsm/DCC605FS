@@ -34,11 +34,16 @@ void fs_write_data(struct superblock *sb, uint64_t pos, void *data) {
 	* 0 - Superblock
 	* 1 - Root Inode
 	* 2 - Root Nodeinfo
-	* 3 - Freelist
+	* 3 - Freelist(Initial position)
 	*/
 
 	lseek(sb->fd, pos * sb->blksz, SEEK_SET);
 	write(sb->fd, data, sb->blksz);
+}
+
+void fs_read_data(struct superblock *sb, uint64_t pos, void *data) {
+	lseek(sb->fd, pos * sb->blksz, SEEK_SET);
+	read(sb->fd, data, sb->blksz);
 }
 
 /************************
@@ -67,7 +72,7 @@ struct superblock * fs_format(const char *fname, uint64_t blocksize) {
 	sb->magic    = 0xdcc605f5;
 	sb->blks     = get_file_size(fname) / blocksize;
 	sb->blksz    = blocksize;
-	sb->freeblks = sb->blks - 4;
+	sb->freeblks = sb->blks - 3;
 	sb->freelist = 3;
 	sb->root     = 1;
 	sb->fd       = open(fname, O_RDWR);
@@ -103,7 +108,26 @@ struct superblock * fs_format(const char *fname, uint64_t blocksize) {
 }
 
 struct superblock * fs_open(const char *fname) {
+	struct superblock *sb = malloc(sizeof *sb);
+	int fd = open(fname, O_RDWR);
 
+	if(flock(fd, LOCK_EX | LOCK_NB) == -1){
+		errno = EBUSY;
+		return NULL;
+	}
+
+	read(fd, sb, sizeof *sb);
+	sb->fd = fd;
+
+	if(sb->magic != 0xdcc605f5) {
+		flock(sb->fd, LOCK_UN);
+		close(sb->fd);
+		free(sb);
+		errno = EBADF;
+		return NULL;
+	}
+
+	return sb;
 }
 
 int fs_close(struct superblock *sb) {
@@ -120,11 +144,37 @@ int fs_close(struct superblock *sb) {
 }
 
 uint64_t fs_get_block(struct superblock *sb) {
+	if(sb->freeblks == 0) {
+		return 0;
+	}
 
+	uint64_t ret;
+	struct freepage *freepage = malloc(sb->blksz);
+
+	fs_read_data(sb, sb->freelist, (void*) freepage);
+
+	ret = sb->freelist;
+	sb->freeblks--;
+	sb->freelist = freepage->next;
+
+	fs_write_data(sb, 0, (void*) sb);
+
+	return ret;
 }
 
 int fs_put_block(struct superblock *sb, uint64_t block) {
+	struct freepage *freepage = malloc(sb->blksz);
 
+	freepage->next = sb->freelist;
+	freepage->count = 0;
+
+	sb->freeblks++;
+	sb->freelist = block;
+
+	fs_write_data(sb, block, (void*) freepage);
+	fs_write_data(sb, 0, (void*) sb);
+
+	return 0;
 }
 
 int fs_write_file(struct superblock *sb, const char *fname, char *buf, size_t cnt) {

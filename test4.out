@@ -1,9 +1,0 @@
-fsize 524288 blksz 64
-fsize 1048576 blksz 64
-fsize 2097152 blksz 64
-fsize 4194304 blksz 64
-fsize 524288 blksz 128
-FAIL blknum >= numblocks
-
-FAIL fs_free_check
-

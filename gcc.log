@@ -646,3 +646,597 @@ fs.c: In function ‘fs_list_dir’:
 fs.c:152:1: warning: control reaches end of non-void function [-Wreturn-type]
  }
  ^
+fs.c: In function ‘fs_get_block’:
+fs.c:143:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_put_block’:
+fs.c:147:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_write_file’:
+fs.c:151:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_read_file’:
+fs.c:155:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_unlink’:
+fs.c:159:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_mkdir’:
+fs.c:163:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_rmdir’:
+fs.c:167:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_list_dir’:
+fs.c:171:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_get_block’:
+fs.c:143:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_put_block’:
+fs.c:147:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_write_file’:
+fs.c:151:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_read_file’:
+fs.c:155:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_unlink’:
+fs.c:159:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_mkdir’:
+fs.c:163:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_rmdir’:
+fs.c:167:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_list_dir’:
+fs.c:171:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_get_block’:
+fs.c:143:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_put_block’:
+fs.c:147:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_write_file’:
+fs.c:151:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_read_file’:
+fs.c:155:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_unlink’:
+fs.c:159:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_mkdir’:
+fs.c:163:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_rmdir’:
+fs.c:167:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_list_dir’:
+fs.c:171:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_get_block’:
+fs.c:154:41: error: ‘freelist’ undeclared (first use in this function)
+  fs_read_data(sb, sb->freelist, (void*) freelist);
+                                         ^
+fs.c:154:41: note: each undeclared identifier is reported only once for each function it appears in
+fs.c:152:19: warning: unused variable ‘freepage’ [-Wunused-variable]
+  struct freepage *freepage = malloc(sb->blksz);
+                   ^
+fs.c: In function ‘fs_write_file’:
+fs.c:182:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_read_file’:
+fs.c:186:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_unlink’:
+fs.c:190:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_mkdir’:
+fs.c:194:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_rmdir’:
+fs.c:198:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_list_dir’:
+fs.c:202:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+gcc: error: fs.o: No such file or directory
+gcc: error: fs.o: No such file or directory
+gcc: error: fs.o: No such file or directory
+gcc: error: fs.o: No such file or directory
+fs.c: In function ‘fs_get_block’:
+fs.c:154:41: error: ‘freelist’ undeclared (first use in this function)
+  fs_read_data(sb, sb->freelist, (void*) freelist);
+                                         ^
+fs.c:154:41: note: each undeclared identifier is reported only once for each function it appears in
+fs.c:152:19: warning: unused variable ‘freepage’ [-Wunused-variable]
+  struct freepage *freepage = malloc(sb->blksz);
+                   ^
+fs.c: In function ‘fs_write_file’:
+fs.c:182:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_read_file’:
+fs.c:186:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_unlink’:
+fs.c:190:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_mkdir’:
+fs.c:194:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_rmdir’:
+fs.c:198:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_list_dir’:
+fs.c:202:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+gcc: error: fs.o: No such file or directory
+fs.c: In function ‘fs_get_block’:
+fs.c:154:41: error: ‘freelist’ undeclared (first use in this function)
+  fs_read_data(sb, sb->freelist, (void*) freelist);
+                                         ^
+fs.c:154:41: note: each undeclared identifier is reported only once for each function it appears in
+fs.c:152:19: warning: unused variable ‘freepage’ [-Wunused-variable]
+  struct freepage *freepage = malloc(sb->blksz);
+                   ^
+fs.c: In function ‘fs_write_file’:
+fs.c:182:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_read_file’:
+fs.c:186:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_unlink’:
+fs.c:190:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_mkdir’:
+fs.c:194:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_rmdir’:
+fs.c:198:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_list_dir’:
+fs.c:202:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+gcc: error: fs.o: No such file or directory
+fs.c: In function ‘fs_get_block’:
+fs.c:158:17: error: ‘freelist’ undeclared (first use in this function)
+  sb->freelist = freelist->next;
+                 ^
+fs.c:158:17: note: each undeclared identifier is reported only once for each function it appears in
+fs.c: In function ‘fs_write_file’:
+fs.c:182:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_read_file’:
+fs.c:186:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_unlink’:
+fs.c:190:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_mkdir’:
+fs.c:194:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_rmdir’:
+fs.c:198:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_list_dir’:
+fs.c:202:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+gcc: error: fs.o: No such file or directory
+gcc: error: fs.o: No such file or directory
+gcc: error: fs.o: No such file or directory
+gcc: error: fs.o: No such file or directory
+fs.c: In function ‘fs_get_block’:
+fs.c:158:17: error: ‘freelist’ undeclared (first use in this function)
+  sb->freelist = freelist->next;
+                 ^
+fs.c:158:17: note: each undeclared identifier is reported only once for each function it appears in
+fs.c: In function ‘fs_write_file’:
+fs.c:182:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_read_file’:
+fs.c:186:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_unlink’:
+fs.c:190:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_mkdir’:
+fs.c:194:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_rmdir’:
+fs.c:198:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_list_dir’:
+fs.c:202:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+gcc: error: fs.o: No such file or directory
+fs.c: In function ‘fs_get_block’:
+fs.c:158:17: error: ‘freelist’ undeclared (first use in this function)
+  sb->freelist = freelist->next;
+                 ^
+fs.c:158:17: note: each undeclared identifier is reported only once for each function it appears in
+fs.c: In function ‘fs_write_file’:
+fs.c:182:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_read_file’:
+fs.c:186:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_unlink’:
+fs.c:190:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_mkdir’:
+fs.c:194:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_rmdir’:
+fs.c:198:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_list_dir’:
+fs.c:202:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+gcc: error: fs.o: No such file or directory
+fs.c: In function ‘fs_write_file’:
+fs.c:182:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_read_file’:
+fs.c:186:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_unlink’:
+fs.c:190:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_mkdir’:
+fs.c:194:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_rmdir’:
+fs.c:198:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_list_dir’:
+fs.c:202:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_write_file’:
+fs.c:182:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_read_file’:
+fs.c:186:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_unlink’:
+fs.c:190:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_mkdir’:
+fs.c:194:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_rmdir’:
+fs.c:198:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_list_dir’:
+fs.c:202:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_write_file’:
+fs.c:186:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_read_file’:
+fs.c:190:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_unlink’:
+fs.c:194:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_mkdir’:
+fs.c:198:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_rmdir’:
+fs.c:202:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_list_dir’:
+fs.c:206:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+/tmp/ccLs0TEl.o: In function `fs_free_check':
+/vagrant/DCC605FS/tests/test4.c:95: undefined reference to `fs_get_block'
+/vagrant/DCC605FS/tests/test4.c:106: undefined reference to `fs_get_block'
+/vagrant/DCC605FS/tests/test4.c:118: undefined reference to `fs_put_block'
+collect2: error: ld returned 1 exit status
+fs.c: In function ‘fs_write_file’:
+fs.c:186:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_read_file’:
+fs.c:190:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_unlink’:
+fs.c:194:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_mkdir’:
+fs.c:198:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_rmdir’:
+fs.c:202:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_list_dir’:
+fs.c:206:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+/tmp/ccVPxVLy.o: In function `fs_free_check':
+/vagrant/DCC605FS/tests/test5.c:98: undefined reference to `fs_get_block'
+/vagrant/DCC605FS/tests/test5.c:109: undefined reference to `fs_get_block'
+/vagrant/DCC605FS/tests/test5.c:121: undefined reference to `fs_put_block'
+collect2: error: ld returned 1 exit status
+fs.c: In function ‘fs_write_file’:
+fs.c:186:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_read_file’:
+fs.c:190:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_unlink’:
+fs.c:194:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_mkdir’:
+fs.c:198:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_rmdir’:
+fs.c:202:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_list_dir’:
+fs.c:206:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+/tmp/ccmvWKPw.o: In function `fs_free_check':
+/vagrant/DCC605FS/tests/test6.c:108: undefined reference to `fs_get_block'
+/vagrant/DCC605FS/tests/test6.c:119: undefined reference to `fs_get_block'
+/vagrant/DCC605FS/tests/test6.c:131: undefined reference to `fs_put_block'
+collect2: error: ld returned 1 exit status
+fs.c: In function ‘fs_write_file’:
+fs.c:182:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_read_file’:
+fs.c:186:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_unlink’:
+fs.c:190:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_mkdir’:
+fs.c:194:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_rmdir’:
+fs.c:198:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_list_dir’:
+fs.c:202:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_write_file’:
+fs.c:182:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_read_file’:
+fs.c:186:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_unlink’:
+fs.c:190:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_mkdir’:
+fs.c:194:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_rmdir’:
+fs.c:198:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_list_dir’:
+fs.c:202:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_write_file’:
+fs.c:182:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_read_file’:
+fs.c:186:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_unlink’:
+fs.c:190:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_mkdir’:
+fs.c:194:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_rmdir’:
+fs.c:198:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_list_dir’:
+fs.c:202:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_write_file’:
+fs.c:182:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_read_file’:
+fs.c:186:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_unlink’:
+fs.c:190:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_mkdir’:
+fs.c:194:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_rmdir’:
+fs.c:198:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_list_dir’:
+fs.c:202:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_write_file’:
+fs.c:182:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_read_file’:
+fs.c:186:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_unlink’:
+fs.c:190:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_mkdir’:
+fs.c:194:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_rmdir’:
+fs.c:198:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_list_dir’:
+fs.c:202:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_write_file’:
+fs.c:182:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_read_file’:
+fs.c:186:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_unlink’:
+fs.c:190:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_mkdir’:
+fs.c:194:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_rmdir’:
+fs.c:198:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_list_dir’:
+fs.c:202:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_write_file’:
+fs.c:182:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_read_file’:
+fs.c:186:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_unlink’:
+fs.c:190:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_mkdir’:
+fs.c:194:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_rmdir’:
+fs.c:198:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_list_dir’:
+fs.c:202:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
