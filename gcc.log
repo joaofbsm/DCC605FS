@@ -1240,3 +1240,948 @@ fs.c: In function ‘fs_list_dir’:
 fs.c:202:1: warning: control reaches end of non-void function [-Wreturn-type]
  }
  ^
+fs.c: In function ‘fs_write_file’:
+fs.c:182:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_read_file’:
+fs.c:186:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_unlink’:
+fs.c:190:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_mkdir’:
+fs.c:194:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_rmdir’:
+fs.c:198:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_list_dir’:
+fs.c:202:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_write_file’:
+fs.c:182:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_read_file’:
+fs.c:186:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_unlink’:
+fs.c:190:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_mkdir’:
+fs.c:194:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_rmdir’:
+fs.c:198:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_list_dir’:
+fs.c:202:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_write_file’:
+fs.c:182:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_read_file’:
+fs.c:186:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_unlink’:
+fs.c:190:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_mkdir’:
+fs.c:194:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_rmdir’:
+fs.c:198:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_list_dir’:
+fs.c:202:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_write_file’:
+fs.c:182:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_read_file’:
+fs.c:186:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_unlink’:
+fs.c:190:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_mkdir’:
+fs.c:194:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_rmdir’:
+fs.c:198:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_list_dir’:
+fs.c:202:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_write_file’:
+fs.c:182:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_read_file’:
+fs.c:186:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_unlink’:
+fs.c:190:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_mkdir’:
+fs.c:194:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_rmdir’:
+fs.c:198:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_list_dir’:
+fs.c:202:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_write_file’:
+fs.c:182:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_read_file’:
+fs.c:186:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_unlink’:
+fs.c:190:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_mkdir’:
+fs.c:194:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_rmdir’:
+fs.c:198:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_list_dir’:
+fs.c:202:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_find_dir’:
+fs.c:59:8: warning: assignment makes integer from pointer without a cast [enabled by default]
+  token = strtok(pathcopy, "/");
+        ^
+fs.c:60:14: warning: comparison between pointer and integer [enabled by default]
+  while(token != NULL) {
+              ^
+fs.c:62:9: warning: assignment makes integer from pointer without a cast [enabled by default]
+   token = strtok(NULL, "/");
+         ^
+fs.c:65:17: error: expected statement before ‘)’ token
+  if(!pathlenght)) {
+                 ^
+fs.c:70:47: error: dereferencing pointer to incomplete type
+  struct dir *dir              = malloc(sizeof *dir);
+                                               ^
+fs.c:78:2: warning: passing argument 1 of ‘strtok’ discards ‘const’ qualifier from pointer target type [enabled by default]
+  token = strtok(dpath, "/");
+  ^
+In file included from fs.c:10:0:
+/usr/include/string.h:348:14: note: expected ‘char * restrict’ but argument is of type ‘const char *’
+ extern char *strtok (char *__restrict __s, const char *__restrict __delim)
+              ^
+fs.c:78:8: warning: assignment makes integer from pointer without a cast [enabled by default]
+  token = strtok(dpath, "/");
+        ^
+fs.c:89:4: warning: passing argument 2 of ‘strcmp’ makes pointer from integer without a cast [enabled by default]
+    if(!strcmp(auxnodeinfo->name, token) {
+    ^
+In file included from fs.c:10:0:
+/usr/include/string.h:144:12: note: expected ‘const char *’ but argument is of type ‘char’
+ extern int strcmp (const char *__s1, const char *__s2)
+            ^
+fs.c:89:41: error: expected ‘)’ before ‘{’ token
+    if(!strcmp(auxnodeinfo->name, token) {
+                                         ^
+fs.c:110:3: error: expected expression before ‘}’ token
+   }
+   ^
+fs.c:111:9: warning: assignment makes integer from pointer without a cast [enabled by default]
+   token = strtok(NULL, "/");
+         ^
+fs.c: At top level:
+fs.c:117:1: warning: data definition has no type or storage class [enabled by default]
+ check_free_link();
+ ^
+fs.c:117:1: warning: type defaults to ‘int’ in declaration of ‘check_free_link’ [enabled by default]
+fs.c:118:1: error: expected identifier or ‘(’ before ‘if’
+ if links[] == 0
+ ^
+fs.c: In function ‘fs_write_file’:
+fs.c:257:6: warning: variable ‘extrainodes’ set but not used [-Wunused-but-set-variable]
+  int extrainodes = 0;
+      ^
+fs.c: In function ‘fs_mkdir’:
+fs.c:294:3: warning: return makes integer from pointer without a cast [enabled by default]
+   return NULL;
+   ^
+fs.c: In function ‘fs_write_file’:
+fs.c:278:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_read_file’:
+fs.c:282:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_unlink’:
+fs.c:286:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_mkdir’:
+fs.c:298:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_rmdir’:
+fs.c:302:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_list_dir’:
+fs.c:306:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+gcc: error: fs.o: No such file or directory
+gcc: error: fs.o: No such file or directory
+gcc: error: fs.o: No such file or directory
+gcc: error: fs.o: No such file or directory
+fs.c: In function ‘fs_find_dir’:
+fs.c:59:8: warning: assignment makes integer from pointer without a cast [enabled by default]
+  token = strtok(pathcopy, "/");
+        ^
+fs.c:60:14: warning: comparison between pointer and integer [enabled by default]
+  while(token != NULL) {
+              ^
+fs.c:62:9: warning: assignment makes integer from pointer without a cast [enabled by default]
+   token = strtok(NULL, "/");
+         ^
+fs.c:65:17: error: expected statement before ‘)’ token
+  if(!pathlenght)) {
+                 ^
+fs.c:70:47: error: dereferencing pointer to incomplete type
+  struct dir *dir              = malloc(sizeof *dir);
+                                               ^
+fs.c:78:2: warning: passing argument 1 of ‘strtok’ discards ‘const’ qualifier from pointer target type [enabled by default]
+  token = strtok(dpath, "/");
+  ^
+In file included from fs.c:10:0:
+/usr/include/string.h:348:14: note: expected ‘char * restrict’ but argument is of type ‘const char *’
+ extern char *strtok (char *__restrict __s, const char *__restrict __delim)
+              ^
+fs.c:78:8: warning: assignment makes integer from pointer without a cast [enabled by default]
+  token = strtok(dpath, "/");
+        ^
+fs.c:89:4: warning: passing argument 2 of ‘strcmp’ makes pointer from integer without a cast [enabled by default]
+    if(!strcmp(auxnodeinfo->name, token) {
+    ^
+In file included from fs.c:10:0:
+/usr/include/string.h:144:12: note: expected ‘const char *’ but argument is of type ‘char’
+ extern int strcmp (const char *__s1, const char *__s2)
+            ^
+fs.c:89:41: error: expected ‘)’ before ‘{’ token
+    if(!strcmp(auxnodeinfo->name, token) {
+                                         ^
+fs.c:110:3: error: expected expression before ‘}’ token
+   }
+   ^
+fs.c:111:9: warning: assignment makes integer from pointer without a cast [enabled by default]
+   token = strtok(NULL, "/");
+         ^
+fs.c: At top level:
+fs.c:117:1: warning: data definition has no type or storage class [enabled by default]
+ check_free_link();
+ ^
+fs.c:117:1: warning: type defaults to ‘int’ in declaration of ‘check_free_link’ [enabled by default]
+fs.c:118:1: error: expected identifier or ‘(’ before ‘if’
+ if links[] == 0
+ ^
+fs.c: In function ‘fs_write_file’:
+fs.c:257:6: warning: variable ‘extrainodes’ set but not used [-Wunused-but-set-variable]
+  int extrainodes = 0;
+      ^
+fs.c: In function ‘fs_mkdir’:
+fs.c:294:3: warning: return makes integer from pointer without a cast [enabled by default]
+   return NULL;
+   ^
+fs.c: In function ‘fs_write_file’:
+fs.c:278:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_read_file’:
+fs.c:282:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_unlink’:
+fs.c:286:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_mkdir’:
+fs.c:298:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_rmdir’:
+fs.c:302:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_list_dir’:
+fs.c:306:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+gcc: error: fs.o: No such file or directory
+fs.c: In function ‘fs_find_dir’:
+fs.c:59:8: warning: assignment makes integer from pointer without a cast [enabled by default]
+  token = strtok(pathcopy, "/");
+        ^
+fs.c:60:14: warning: comparison between pointer and integer [enabled by default]
+  while(token != NULL) {
+              ^
+fs.c:62:9: warning: assignment makes integer from pointer without a cast [enabled by default]
+   token = strtok(NULL, "/");
+         ^
+fs.c:65:17: error: expected statement before ‘)’ token
+  if(!pathlenght)) {
+                 ^
+fs.c:70:47: error: dereferencing pointer to incomplete type
+  struct dir *dir              = malloc(sizeof *dir);
+                                               ^
+fs.c:78:2: warning: passing argument 1 of ‘strtok’ discards ‘const’ qualifier from pointer target type [enabled by default]
+  token = strtok(dpath, "/");
+  ^
+In file included from fs.c:10:0:
+/usr/include/string.h:348:14: note: expected ‘char * restrict’ but argument is of type ‘const char *’
+ extern char *strtok (char *__restrict __s, const char *__restrict __delim)
+              ^
+fs.c:78:8: warning: assignment makes integer from pointer without a cast [enabled by default]
+  token = strtok(dpath, "/");
+        ^
+fs.c:89:4: warning: passing argument 2 of ‘strcmp’ makes pointer from integer without a cast [enabled by default]
+    if(!strcmp(auxnodeinfo->name, token) {
+    ^
+In file included from fs.c:10:0:
+/usr/include/string.h:144:12: note: expected ‘const char *’ but argument is of type ‘char’
+ extern int strcmp (const char *__s1, const char *__s2)
+            ^
+fs.c:89:41: error: expected ‘)’ before ‘{’ token
+    if(!strcmp(auxnodeinfo->name, token) {
+                                         ^
+fs.c:110:3: error: expected expression before ‘}’ token
+   }
+   ^
+fs.c:111:9: warning: assignment makes integer from pointer without a cast [enabled by default]
+   token = strtok(NULL, "/");
+         ^
+fs.c: At top level:
+fs.c:117:1: warning: data definition has no type or storage class [enabled by default]
+ check_free_link();
+ ^
+fs.c:117:1: warning: type defaults to ‘int’ in declaration of ‘check_free_link’ [enabled by default]
+fs.c:118:1: error: expected identifier or ‘(’ before ‘if’
+ if links[] == 0
+ ^
+fs.c: In function ‘fs_write_file’:
+fs.c:257:6: warning: variable ‘extrainodes’ set but not used [-Wunused-but-set-variable]
+  int extrainodes = 0;
+      ^
+fs.c: In function ‘fs_mkdir’:
+fs.c:294:3: warning: return makes integer from pointer without a cast [enabled by default]
+   return NULL;
+   ^
+fs.c: In function ‘fs_write_file’:
+fs.c:278:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_read_file’:
+fs.c:282:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_unlink’:
+fs.c:286:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_mkdir’:
+fs.c:298:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_rmdir’:
+fs.c:302:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_list_dir’:
+fs.c:306:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+gcc: error: fs.o: No such file or directory
+fs.c: In function ‘fs_write_file’:
+fs.c:260:6: warning: variable ‘extrainodes’ set but not used [-Wunused-but-set-variable]
+  int extrainodes = 0;
+      ^
+fs.c:281:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_read_file’:
+fs.c:285:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_unlink’:
+fs.c:289:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_mkdir’:
+fs.c:301:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_rmdir’:
+fs.c:305:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_list_dir’:
+fs.c:309:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_find_dir’:
+fs.c:57:8: warning: ‘pathcopy’ is used uninitialized in this function [-Wuninitialized]
+  strcpy(pathcopy, dpath);
+        ^
+fs.c: In function ‘fs_write_file’:
+fs.c:260:6: warning: variable ‘extrainodes’ set but not used [-Wunused-but-set-variable]
+  int extrainodes = 0;
+      ^
+fs.c:281:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_read_file’:
+fs.c:285:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_unlink’:
+fs.c:289:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_mkdir’:
+fs.c:301:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_rmdir’:
+fs.c:305:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_list_dir’:
+fs.c:309:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_find_dir’:
+fs.c:57:8: warning: ‘pathcopy’ is used uninitialized in this function [-Wuninitialized]
+  strcpy(pathcopy, dpath);
+        ^
+fs.c: In function ‘fs_write_file’:
+fs.c:260:6: warning: variable ‘extrainodes’ set but not used [-Wunused-but-set-variable]
+  int extrainodes = 0;
+      ^
+fs.c:281:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_read_file’:
+fs.c:285:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_unlink’:
+fs.c:289:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_mkdir’:
+fs.c:301:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_rmdir’:
+fs.c:305:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_list_dir’:
+fs.c:309:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_find_dir’:
+fs.c:57:8: warning: ‘pathcopy’ is used uninitialized in this function [-Wuninitialized]
+  strcpy(pathcopy, dpath);
+        ^
+fs.c: In function ‘fs_write_file’:
+fs.c:291:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_read_file’:
+fs.c:295:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_unlink’:
+fs.c:299:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_mkdir’:
+fs.c:311:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_rmdir’:
+fs.c:315:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_list_dir’:
+fs.c:319:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_find_dir’:
+fs.c:57:8: warning: ‘pathcopy’ is used uninitialized in this function [-Wuninitialized]
+  strcpy(pathcopy, dpath);
+        ^
+fs.c: In function ‘fs_write_file’:
+fs.c:291:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_read_file’:
+fs.c:295:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_unlink’:
+fs.c:299:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_mkdir’:
+fs.c:311:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_rmdir’:
+fs.c:315:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_list_dir’:
+fs.c:319:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_find_dir’:
+fs.c:57:8: warning: ‘pathcopy’ is used uninitialized in this function [-Wuninitialized]
+  strcpy(pathcopy, dpath);
+        ^
+fs.c: In function ‘fs_write_file’:
+fs.c:291:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_read_file’:
+fs.c:295:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_unlink’:
+fs.c:299:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_mkdir’:
+fs.c:311:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_rmdir’:
+fs.c:315:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_list_dir’:
+fs.c:319:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_find_dir’:
+fs.c:57:8: warning: ‘pathcopy’ is used uninitialized in this function [-Wuninitialized]
+  strcpy(pathcopy, dpath);
+        ^
+fs.c: In function ‘fs_write_file’:
+fs.c:288:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_read_file’:
+fs.c:292:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_unlink’:
+fs.c:296:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_mkdir’:
+fs.c:305:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_rmdir’:
+fs.c:309:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_list_dir’:
+fs.c:313:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_find_dir’:
+fs.c:57:8: warning: ‘pathcopy’ is used uninitialized in this function [-Wuninitialized]
+  strcpy(pathcopy, dpath);
+        ^
+fs.c: In function ‘fs_write_file’:
+fs.c:288:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_read_file’:
+fs.c:292:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_unlink’:
+fs.c:296:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_mkdir’:
+fs.c:305:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_rmdir’:
+fs.c:309:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_list_dir’:
+fs.c:313:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_find_dir’:
+fs.c:57:8: warning: ‘pathcopy’ is used uninitialized in this function [-Wuninitialized]
+  strcpy(pathcopy, dpath);
+        ^
+fs.c: In function ‘fs_write_file’:
+fs.c:288:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_read_file’:
+fs.c:292:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_unlink’:
+fs.c:296:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_mkdir’:
+fs.c:305:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_rmdir’:
+fs.c:309:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_list_dir’:
+fs.c:313:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_find_dir’:
+fs.c:57:8: warning: ‘pathcopy’ is used uninitialized in this function [-Wuninitialized]
+  strcpy(pathcopy, dpath);
+        ^
+fs.c: In function ‘fs_read_file’:
+fs.c:298:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_unlink’:
+fs.c:302:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_mkdir’:
+fs.c:307:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_rmdir’:
+fs.c:311:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_list_dir’:
+fs.c:315:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_find_dir’:
+fs.c:57:8: warning: ‘pathcopy’ is used uninitialized in this function [-Wuninitialized]
+  strcpy(pathcopy, dpath);
+        ^
+fs.c: In function ‘fs_read_file’:
+fs.c:298:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_unlink’:
+fs.c:302:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_mkdir’:
+fs.c:307:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_rmdir’:
+fs.c:311:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_list_dir’:
+fs.c:315:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_find_dir’:
+fs.c:57:8: warning: ‘pathcopy’ is used uninitialized in this function [-Wuninitialized]
+  strcpy(pathcopy, dpath);
+        ^
+fs.c: In function ‘fs_read_file’:
+fs.c:298:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_unlink’:
+fs.c:302:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_mkdir’:
+fs.c:307:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_rmdir’:
+fs.c:311:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_list_dir’:
+fs.c:315:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_find_dir’:
+fs.c:57:8: warning: ‘pathcopy’ is used uninitialized in this function [-Wuninitialized]
+  strcpy(pathcopy, dpath);
+        ^
+fs.c: In function ‘fs_read_file’:
+fs.c:300:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_unlink’:
+fs.c:304:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_mkdir’:
+fs.c:309:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_rmdir’:
+fs.c:313:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_list_dir’:
+fs.c:317:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_find_dir’:
+fs.c:57:8: warning: ‘pathcopy’ is used uninitialized in this function [-Wuninitialized]
+  strcpy(pathcopy, dpath);
+        ^
+fs.c: In function ‘fs_read_file’:
+fs.c:300:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_unlink’:
+fs.c:304:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_mkdir’:
+fs.c:309:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_rmdir’:
+fs.c:313:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_list_dir’:
+fs.c:317:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_find_dir’:
+fs.c:57:8: warning: ‘pathcopy’ is used uninitialized in this function [-Wuninitialized]
+  strcpy(pathcopy, dpath);
+        ^
+fs.c: In function ‘fs_read_file’:
+fs.c:300:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_unlink’:
+fs.c:304:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_mkdir’:
+fs.c:309:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_rmdir’:
+fs.c:313:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_list_dir’:
+fs.c:317:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_find_dir’:
+fs.c:57:8: warning: ‘pathcopy’ is used uninitialized in this function [-Wuninitialized]
+  strcpy(pathcopy, dpath);
+        ^
+fs.c: In function ‘fs_read_file’:
+fs.c:303:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_unlink’:
+fs.c:307:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_mkdir’:
+fs.c:312:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_rmdir’:
+fs.c:316:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_list_dir’:
+fs.c:320:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_find_dir’:
+fs.c:57:8: warning: ‘pathcopy’ is used uninitialized in this function [-Wuninitialized]
+  strcpy(pathcopy, dpath);
+        ^
+fs.c: In function ‘fs_read_file’:
+fs.c:298:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_unlink’:
+fs.c:302:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_mkdir’:
+fs.c:307:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_rmdir’:
+fs.c:311:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_list_dir’:
+fs.c:315:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_find_dir’:
+fs.c:57:8: warning: ‘pathcopy’ is used uninitialized in this function [-Wuninitialized]
+  strcpy(pathcopy, dpath);
+        ^
+fs.c: In function ‘fs_read_file’:
+fs.c:298:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_unlink’:
+fs.c:302:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_mkdir’:
+fs.c:307:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_rmdir’:
+fs.c:311:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_list_dir’:
+fs.c:315:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_find_dir’:
+fs.c:57:8: warning: ‘pathcopy’ is used uninitialized in this function [-Wuninitialized]
+  strcpy(pathcopy, dpath);
+        ^
+fs.c: In function ‘fs_read_file’:
+fs.c:320:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_unlink’:
+fs.c:324:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_mkdir’:
+fs.c:329:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_rmdir’:
+fs.c:333:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_list_dir’:
+fs.c:337:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_find_dir’:
+fs.c:57:8: warning: ‘pathcopy’ is used uninitialized in this function [-Wuninitialized]
+  strcpy(pathcopy, dpath);
+        ^
+fs.c: In function ‘fs_read_file’:
+fs.c:320:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_unlink’:
+fs.c:324:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_mkdir’:
+fs.c:329:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_rmdir’:
+fs.c:333:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_list_dir’:
+fs.c:337:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_find_dir’:
+fs.c:57:8: warning: ‘pathcopy’ is used uninitialized in this function [-Wuninitialized]
+  strcpy(pathcopy, dpath);
+        ^
+fs.c: In function ‘fs_read_file’:
+fs.c:320:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_unlink’:
+fs.c:324:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_mkdir’:
+fs.c:329:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_rmdir’:
+fs.c:333:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_list_dir’:
+fs.c:337:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_find_dir’:
+fs.c:57:8: warning: ‘pathcopy’ is used uninitialized in this function [-Wuninitialized]
+  strcpy(pathcopy, dpath);
+        ^
