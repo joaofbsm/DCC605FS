@@ -54,21 +54,26 @@ int test(uint64_t fsize, uint64_t blksz)/*{{{*/
 	generate_file(fsize);
 	struct superblock *sb = fs_format(fname, blksz);
 	err = errno;
+	printf("blksz check\n");
 	if(blksz < MIN_BLOCK_SIZE) {
 		if(err != EINVAL) ERROR("FAIL did not set errno\n");
 		if(sb != NULL) ERROR("FAIL formatted too small blocks\n");
 		return 0;
 	}
+	printf("blk count check\n");
 	if(fsize/blksz < MIN_BLOCK_COUNT) {
 		if(err != ENOSPC) ERROR("FAIL did not set errno\n");
 		if(sb != NULL) ERROR("FAIL formatted too small volume\n");
 		return 0;
 	}
 	if(sb == NULL) ERROR("FAIL no sb\n");
-
+	printf("passed sb check\n");
 	if(fs_check(sb, fsize, blksz)) ERROR("FAIL fs_check\n");
+	printf("passed fs_check\n");
 	if(fs_free_check(&sb, fsize, blksz)) ERROR("FAIL fs_free_check\n");
+	printf("passed free_check\n");
 	if(fs_ops_test(sb)) ERROR("FAIL fs_ops_test\n");
+	printf("passed ops_test\n");
 	if(fs_close(sb)) ERROR("FAIL error on fs_close");
 
 	return 0;
@@ -130,9 +135,10 @@ int fs_ops_test(struct superblock *sb)/*{{{*/
 {
 	uint64_t freeblks = sb->freeblks;
 	// printf("had %llu free blocks\n", (long long unsigned)sb->freeblks);
-
+	printf("write check\n");
 	if(fs_write_file(sb, "/test.1", "test.1", strlen("test.1")+1) < 0)
 		ERROR("FAIL fs_write_file\n");
+	printf("mkdir check\n");
 	if(fs_mkdir(sb, "/dir.1") < 0)
 		ERROR("FAIL fs_mkdir\n");
 	if(fs_write_file(sb, "/dir.1/test.2", "test.2", strlen("test.2")+1) < 0)

@@ -2185,3 +2185,517 @@ fs.c: In function ‘fs_find_dir’:
 fs.c:57:8: warning: ‘pathcopy’ is used uninitialized in this function [-Wuninitialized]
   strcpy(pathcopy, dpath);
         ^
+fs.c: In function ‘fs_find_dir_info’:
+fs.c:80:6: warning: unused variable ‘iterations’ [-Wunused-variable]
+  int iterations;
+      ^
+fs.c: In function ‘fs_unlink’:
+fs.c:485:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_mkdir’:
+fs.c:489:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_rmdir’:
+fs.c:493:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_list_dir’:
+fs.c:497:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_find_dir_info’:
+fs.c:69:8: warning: ‘pathcopy’ is used uninitialized in this function [-Wuninitialized]
+  strcpy(pathcopy, dpath);
+        ^
+fs.c:73:9: warning: ‘filename’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+   strcpy(filename, token);
+         ^
+fs.c: In function ‘fs_find_dir_info’:
+fs.c:80:6: warning: unused variable ‘iterations’ [-Wunused-variable]
+  int iterations;
+      ^
+fs.c: In function ‘fs_unlink’:
+fs.c:485:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_mkdir’:
+fs.c:489:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_rmdir’:
+fs.c:493:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_list_dir’:
+fs.c:497:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_find_dir_info’:
+fs.c:69:8: warning: ‘pathcopy’ is used uninitialized in this function [-Wuninitialized]
+  strcpy(pathcopy, dpath);
+        ^
+fs.c:73:9: warning: ‘filename’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+   strcpy(filename, token);
+         ^
+fs.c: In function ‘fs_find_dir_info’:
+fs.c:80:6: warning: unused variable ‘iterations’ [-Wunused-variable]
+  int iterations;
+      ^
+fs.c: In function ‘fs_unlink’:
+fs.c:485:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_mkdir’:
+fs.c:489:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_rmdir’:
+fs.c:493:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_list_dir’:
+fs.c:497:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_find_dir_info’:
+fs.c:69:8: warning: ‘pathcopy’ is used uninitialized in this function [-Wuninitialized]
+  strcpy(pathcopy, dpath);
+        ^
+fs.c:73:9: warning: ‘filename’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+   strcpy(filename, token);
+         ^
+fs.c: In function ‘fs_find_dir_info’:
+fs.c:80:6: warning: unused variable ‘iterations’ [-Wunused-variable]
+  int iterations;
+      ^
+fs.c: In function ‘fs_unlink’:
+fs.c:485:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_mkdir’:
+fs.c:489:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_rmdir’:
+fs.c:493:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_list_dir’:
+fs.c:497:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_find_dir_info’:
+fs.c:69:8: warning: ‘pathcopy’ is used uninitialized in this function [-Wuninitialized]
+  strcpy(pathcopy, dpath);
+        ^
+fs.c:73:9: warning: ‘filename’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+   strcpy(filename, token);
+         ^
+fs.c: In function ‘fs_find_dir_info’:
+fs.c:80:6: warning: unused variable ‘iterations’ [-Wunused-variable]
+  int iterations;
+      ^
+fs.c: In function ‘fs_unlink’:
+fs.c:485:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_mkdir’:
+fs.c:489:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_rmdir’:
+fs.c:493:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_list_dir’:
+fs.c:497:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_find_dir_info’:
+fs.c:69:8: warning: ‘pathcopy’ is used uninitialized in this function [-Wuninitialized]
+  strcpy(pathcopy, dpath);
+        ^
+fs.c:73:9: warning: ‘filename’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+   strcpy(filename, token);
+         ^
+fs.c: In function ‘fs_find_dir_info’:
+fs.c:80:6: warning: unused variable ‘iterations’ [-Wunused-variable]
+  int iterations;
+      ^
+fs.c: In function ‘fs_unlink’:
+fs.c:485:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_mkdir’:
+fs.c:489:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_rmdir’:
+fs.c:493:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_list_dir’:
+fs.c:497:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_find_dir_info’:
+fs.c:69:8: warning: ‘pathcopy’ is used uninitialized in this function [-Wuninitialized]
+  strcpy(pathcopy, dpath);
+        ^
+fs.c:73:9: warning: ‘filename’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+   strcpy(filename, token);
+         ^
+fs.c: In function ‘fs_find_dir_info’:
+fs.c:87:6: warning: unused variable ‘iterations’ [-Wunused-variable]
+  int iterations;
+      ^
+fs.c: In function ‘fs_add_link’:
+fs.c:215:37: error: ‘blocksize’ undeclared (first use in this function)
+  struct nodeinfo *rootinfo = malloc(blocksize);
+                                     ^
+fs.c:215:37: note: each undeclared identifier is reported only once for each function it appears in
+fs.c:219:40: error: ‘nodeinfo’ undeclared (first use in this function)
+  fs_read_data(sb, inode->meta, (void*) nodeinfo); 
+                                        ^
+fs.c:215:19: warning: unused variable ‘rootinfo’ [-Wunused-variable]
+  struct nodeinfo *rootinfo = malloc(blocksize);
+                   ^
+fs.c: In function ‘fs_remove_link’:
+fs.c:232:37: error: ‘blocksize’ undeclared (first use in this function)
+  struct nodeinfo *rootinfo = malloc(blocksize);
+                                     ^
+fs.c:236:40: error: ‘nodeinfo’ undeclared (first use in this function)
+  fs_read_data(sb, inode->meta, (void*) nodeinfo);
+                                        ^
+fs.c:232:19: warning: unused variable ‘rootinfo’ [-Wunused-variable]
+  struct nodeinfo *rootinfo = malloc(blocksize);
+                   ^
+fs.c: In function ‘fs_write_file’:
+fs.c:459:28: error: ‘struct dir’ has no member named ‘nomename’
+  strcpy(nodeinfo->name, dir->nomename);
+                            ^
+fs.c: In function ‘fs_mkdir’:
+fs.c:591:29: error: ‘struct dir’ has no member named ‘inode’
+  link = fs_find_link(sb, dir->inode, )
+                             ^
+fs.c:591:38: error: expected expression before ‘)’ token
+  link = fs_find_link(sb, dir->inode, )
+                                      ^
+fs.c:582:19: warning: unused variable ‘nodeinfo’ [-Wunused-variable]
+  struct nodeinfo *nodeinfo = malloc(sb->blksz);
+                   ^
+fs.c:581:16: warning: unused variable ‘inode’ [-Wunused-variable]
+  struct inode *inode       = malloc(sb->blksz);
+                ^
+fs.c:580:15: warning: variable ‘link’ set but not used [-Wunused-but-set-variable]
+  struct link *link;
+               ^
+fs.c:592:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_rmdir’:
+fs.c:596:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_list_dir’:
+fs.c:600:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_find_dir_info’:
+fs.c:87:6: warning: unused variable ‘iterations’ [-Wunused-variable]
+  int iterations;
+      ^
+fs.c: In function ‘fs_add_link’:
+fs.c:215:37: error: ‘blocksize’ undeclared (first use in this function)
+  struct nodeinfo *rootinfo = malloc(blocksize);
+                                     ^
+fs.c:215:37: note: each undeclared identifier is reported only once for each function it appears in
+fs.c:219:40: error: ‘nodeinfo’ undeclared (first use in this function)
+  fs_read_data(sb, inode->meta, (void*) nodeinfo); 
+                                        ^
+fs.c:215:19: warning: unused variable ‘rootinfo’ [-Wunused-variable]
+  struct nodeinfo *rootinfo = malloc(blocksize);
+                   ^
+fs.c: In function ‘fs_remove_link’:
+fs.c:232:37: error: ‘blocksize’ undeclared (first use in this function)
+  struct nodeinfo *rootinfo = malloc(blocksize);
+                                     ^
+fs.c:236:40: error: ‘nodeinfo’ undeclared (first use in this function)
+  fs_read_data(sb, inode->meta, (void*) nodeinfo);
+                                        ^
+fs.c:232:19: warning: unused variable ‘rootinfo’ [-Wunused-variable]
+  struct nodeinfo *rootinfo = malloc(blocksize);
+                   ^
+fs.c: In function ‘fs_write_file’:
+fs.c:459:28: error: ‘struct dir’ has no member named ‘nomename’
+  strcpy(nodeinfo->name, dir->nomename);
+                            ^
+fs.c: In function ‘fs_mkdir’:
+fs.c:591:29: error: ‘struct dir’ has no member named ‘inode’
+  link = fs_find_link(sb, dir->inode, )
+                             ^
+fs.c:591:38: error: expected expression before ‘)’ token
+  link = fs_find_link(sb, dir->inode, )
+                                      ^
+fs.c:582:19: warning: unused variable ‘nodeinfo’ [-Wunused-variable]
+  struct nodeinfo *nodeinfo = malloc(sb->blksz);
+                   ^
+fs.c:581:16: warning: unused variable ‘inode’ [-Wunused-variable]
+  struct inode *inode       = malloc(sb->blksz);
+                ^
+fs.c:580:15: warning: variable ‘link’ set but not used [-Wunused-but-set-variable]
+  struct link *link;
+               ^
+fs.c:592:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_rmdir’:
+fs.c:596:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_list_dir’:
+fs.c:600:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_find_dir_info’:
+fs.c:87:6: warning: unused variable ‘iterations’ [-Wunused-variable]
+  int iterations;
+      ^
+fs.c: In function ‘fs_add_link’:
+fs.c:215:37: error: ‘blocksize’ undeclared (first use in this function)
+  struct nodeinfo *rootinfo = malloc(blocksize);
+                                     ^
+fs.c:215:37: note: each undeclared identifier is reported only once for each function it appears in
+fs.c:219:40: error: ‘nodeinfo’ undeclared (first use in this function)
+  fs_read_data(sb, inode->meta, (void*) nodeinfo); 
+                                        ^
+fs.c:215:19: warning: unused variable ‘rootinfo’ [-Wunused-variable]
+  struct nodeinfo *rootinfo = malloc(blocksize);
+                   ^
+fs.c: In function ‘fs_remove_link’:
+fs.c:232:37: error: ‘blocksize’ undeclared (first use in this function)
+  struct nodeinfo *rootinfo = malloc(blocksize);
+                                     ^
+fs.c:236:40: error: ‘nodeinfo’ undeclared (first use in this function)
+  fs_read_data(sb, inode->meta, (void*) nodeinfo);
+                                        ^
+fs.c:232:19: warning: unused variable ‘rootinfo’ [-Wunused-variable]
+  struct nodeinfo *rootinfo = malloc(blocksize);
+                   ^
+fs.c: In function ‘fs_write_file’:
+fs.c:459:28: error: ‘struct dir’ has no member named ‘nomename’
+  strcpy(nodeinfo->name, dir->nomename);
+                            ^
+fs.c: In function ‘fs_mkdir’:
+fs.c:591:29: error: ‘struct dir’ has no member named ‘inode’
+  link = fs_find_link(sb, dir->inode, )
+                             ^
+fs.c:591:38: error: expected expression before ‘)’ token
+  link = fs_find_link(sb, dir->inode, )
+                                      ^
+fs.c:582:19: warning: unused variable ‘nodeinfo’ [-Wunused-variable]
+  struct nodeinfo *nodeinfo = malloc(sb->blksz);
+                   ^
+fs.c:581:16: warning: unused variable ‘inode’ [-Wunused-variable]
+  struct inode *inode       = malloc(sb->blksz);
+                ^
+fs.c:580:15: warning: variable ‘link’ set but not used [-Wunused-but-set-variable]
+  struct link *link;
+               ^
+fs.c:592:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_rmdir’:
+fs.c:596:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_list_dir’:
+fs.c:600:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_find_dir_info’:
+fs.c:93:6: warning: unused variable ‘iterations’ [-Wunused-variable]
+  int iterations;
+      ^
+fs.c: In function ‘fs_add_link’:
+fs.c:222:37: error: ‘blocksize’ undeclared (first use in this function)
+  struct nodeinfo *rootinfo = malloc(blocksize);
+                                     ^
+fs.c:222:37: note: each undeclared identifier is reported only once for each function it appears in
+fs.c:226:40: error: ‘nodeinfo’ undeclared (first use in this function)
+  fs_read_data(sb, inode->meta, (void*) nodeinfo); 
+                                        ^
+fs.c:222:19: warning: unused variable ‘rootinfo’ [-Wunused-variable]
+  struct nodeinfo *rootinfo = malloc(blocksize);
+                   ^
+fs.c: In function ‘fs_remove_link’:
+fs.c:239:37: error: ‘blocksize’ undeclared (first use in this function)
+  struct nodeinfo *rootinfo = malloc(blocksize);
+                                     ^
+fs.c:243:40: error: ‘nodeinfo’ undeclared (first use in this function)
+  fs_read_data(sb, inode->meta, (void*) nodeinfo);
+                                        ^
+fs.c:239:19: warning: unused variable ‘rootinfo’ [-Wunused-variable]
+  struct nodeinfo *rootinfo = malloc(blocksize);
+                   ^
+fs.c: In function ‘fs_write_file’:
+fs.c:481:28: error: ‘struct dir’ has no member named ‘nomename’
+  strcpy(nodeinfo->name, dir->nomename);
+                            ^
+fs.c: In function ‘fs_mkdir’:
+fs.c:615:56: error: expected ‘)’ before ‘{’ token
+  if((sb->freeblks < (2 + (link->index == -1 ? 1 : 0))) {
+                                                        ^
+fs.c:650:1: error: expected expression before ‘}’ token
+ }
+ ^
+fs.c:600:19: warning: unused variable ‘nodeinfo’ [-Wunused-variable]
+  struct nodeinfo *nodeinfo = malloc(sb->blksz);
+                   ^
+fs.c:599:16: warning: unused variable ‘inode’ [-Wunused-variable]
+  struct inode *inode       = malloc(sb->blksz);
+                ^
+fs.c:596:11: warning: unused variable ‘dirblk’ [-Wunused-variable]
+  uint64_t dirblk;
+           ^
+fs.c: In function ‘fs_list_dir’:
+fs.c:703:3: warning: return makes pointer from integer without a cast [enabled by default]
+   return -1;
+   ^
+fs.c:711:3: warning: return makes pointer from integer without a cast [enabled by default]
+   return -1;
+   ^
+fs.c: In function ‘fs_mkdir’:
+fs.c:650:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+gcc: error: fs.o: No such file or directory
+gcc: error: fs.o: No such file or directory
+gcc: error: fs.o: No such file or directory
+gcc: error: fs.o: No such file or directory
+fs.c: In function ‘fs_find_dir_info’:
+fs.c:93:6: warning: unused variable ‘iterations’ [-Wunused-variable]
+  int iterations;
+      ^
+fs.c: In function ‘fs_add_link’:
+fs.c:222:37: error: ‘blocksize’ undeclared (first use in this function)
+  struct nodeinfo *rootinfo = malloc(blocksize);
+                                     ^
+fs.c:222:37: note: each undeclared identifier is reported only once for each function it appears in
+fs.c:226:40: error: ‘nodeinfo’ undeclared (first use in this function)
+  fs_read_data(sb, inode->meta, (void*) nodeinfo); 
+                                        ^
+fs.c:222:19: warning: unused variable ‘rootinfo’ [-Wunused-variable]
+  struct nodeinfo *rootinfo = malloc(blocksize);
+                   ^
+fs.c: In function ‘fs_remove_link’:
+fs.c:239:37: error: ‘blocksize’ undeclared (first use in this function)
+  struct nodeinfo *rootinfo = malloc(blocksize);
+                                     ^
+fs.c:243:40: error: ‘nodeinfo’ undeclared (first use in this function)
+  fs_read_data(sb, inode->meta, (void*) nodeinfo);
+                                        ^
+fs.c:239:19: warning: unused variable ‘rootinfo’ [-Wunused-variable]
+  struct nodeinfo *rootinfo = malloc(blocksize);
+                   ^
+fs.c: In function ‘fs_write_file’:
+fs.c:481:28: error: ‘struct dir’ has no member named ‘nomename’
+  strcpy(nodeinfo->name, dir->nomename);
+                            ^
+fs.c: In function ‘fs_mkdir’:
+fs.c:615:56: error: expected ‘)’ before ‘{’ token
+  if((sb->freeblks < (2 + (link->index == -1 ? 1 : 0))) {
+                                                        ^
+fs.c:650:1: error: expected expression before ‘}’ token
+ }
+ ^
+fs.c:600:19: warning: unused variable ‘nodeinfo’ [-Wunused-variable]
+  struct nodeinfo *nodeinfo = malloc(sb->blksz);
+                   ^
+fs.c:599:16: warning: unused variable ‘inode’ [-Wunused-variable]
+  struct inode *inode       = malloc(sb->blksz);
+                ^
+fs.c:596:11: warning: unused variable ‘dirblk’ [-Wunused-variable]
+  uint64_t dirblk;
+           ^
+fs.c: In function ‘fs_list_dir’:
+fs.c:703:3: warning: return makes pointer from integer without a cast [enabled by default]
+   return -1;
+   ^
+fs.c:711:3: warning: return makes pointer from integer without a cast [enabled by default]
+   return -1;
+   ^
+fs.c: In function ‘fs_mkdir’:
+fs.c:650:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+gcc: error: fs.o: No such file or directory
+fs.c: In function ‘fs_find_dir_info’:
+fs.c:93:6: warning: unused variable ‘iterations’ [-Wunused-variable]
+  int iterations;
+      ^
+fs.c: In function ‘fs_add_link’:
+fs.c:222:37: error: ‘blocksize’ undeclared (first use in this function)
+  struct nodeinfo *rootinfo = malloc(blocksize);
+                                     ^
+fs.c:222:37: note: each undeclared identifier is reported only once for each function it appears in
+fs.c:226:40: error: ‘nodeinfo’ undeclared (first use in this function)
+  fs_read_data(sb, inode->meta, (void*) nodeinfo); 
+                                        ^
+fs.c:222:19: warning: unused variable ‘rootinfo’ [-Wunused-variable]
+  struct nodeinfo *rootinfo = malloc(blocksize);
+                   ^
+fs.c: In function ‘fs_remove_link’:
+fs.c:239:37: error: ‘blocksize’ undeclared (first use in this function)
+  struct nodeinfo *rootinfo = malloc(blocksize);
+                                     ^
+fs.c:243:40: error: ‘nodeinfo’ undeclared (first use in this function)
+  fs_read_data(sb, inode->meta, (void*) nodeinfo);
+                                        ^
+fs.c:239:19: warning: unused variable ‘rootinfo’ [-Wunused-variable]
+  struct nodeinfo *rootinfo = malloc(blocksize);
+                   ^
+fs.c: In function ‘fs_write_file’:
+fs.c:481:28: error: ‘struct dir’ has no member named ‘nomename’
+  strcpy(nodeinfo->name, dir->nomename);
+                            ^
+fs.c: In function ‘fs_mkdir’:
+fs.c:615:56: error: expected ‘)’ before ‘{’ token
+  if((sb->freeblks < (2 + (link->index == -1 ? 1 : 0))) {
+                                                        ^
+fs.c:650:1: error: expected expression before ‘}’ token
+ }
+ ^
+fs.c:600:19: warning: unused variable ‘nodeinfo’ [-Wunused-variable]
+  struct nodeinfo *nodeinfo = malloc(sb->blksz);
+                   ^
+fs.c:599:16: warning: unused variable ‘inode’ [-Wunused-variable]
+  struct inode *inode       = malloc(sb->blksz);
+                ^
+fs.c:596:11: warning: unused variable ‘dirblk’ [-Wunused-variable]
+  uint64_t dirblk;
+           ^
+fs.c: In function ‘fs_list_dir’:
+fs.c:703:3: warning: return makes pointer from integer without a cast [enabled by default]
+   return -1;
+   ^
+fs.c:711:3: warning: return makes pointer from integer without a cast [enabled by default]
+   return -1;
+   ^
+fs.c: In function ‘fs_mkdir’:
+fs.c:650:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+gcc: error: fs.o: No such file or directory
+fs.c: In function ‘fs_find_dir_info’:
+fs.c:93:6: warning: unused variable ‘iterations’ [-Wunused-variable]
+  int iterations;
+      ^
+fs.c:82:8: warning: ‘pathcopy’ is used uninitialized in this function [-Wuninitialized]
+  strcpy(pathcopy, dpath);
+        ^
+fs.c:86:9: warning: ‘nodename’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+   strcpy(nodename, token);
+         ^
