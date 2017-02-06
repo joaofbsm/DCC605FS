@@ -20,13 +20,16 @@
 
 /*
  
- - Debug write file to find seg fault
  - Find and delete inode for links that are completely unused(if IMCHILD and inode->next == 0 and all links == 0 then putblock and remove reference to inode->meta(previous block) reference to it)
  - Check if dir is root in rmdir(compare with sb->root)
  - Check find_dir_info behaviour with root
  - Add free to every error return case
  - Check TODOs throughout the code
- - THE MEMORY PROBLEM IS ON DIR INFO OR FIND LINK https://ubuntuforums.org/showthread.php?t=774897
+ - Check if node is IMDIR in unlink
+ - unlink should look in all the links and check if link == 0
+ - UNLINK NOT FREEING DATA BLOCKS
+ - RMDIR NOT FREEING NODEINFO
+
 */
 
 /************************
@@ -80,10 +83,18 @@ struct dir * fs_find_dir_info(struct superblock *sb, const char *dpath) {
 	char *token;
 	char *nodename = malloc(NAME_MAX);
 	char *pathcopy = malloc(NAME_MAX);
+	struct dir *dir = malloc(sizeof *dir); 
 
 	strcpy(pathcopy, dpath);
 
 	token = strtok(pathcopy, "/");
+	if(token == NULL) {
+		dir->dirnode = 1;
+		dir->nodeblock = 1;
+		dir->nodename = "";
+		return dir;
+	}
+
 	while(token != NULL) {
 		strcpy(nodename, token);
 		pathlenght++;
@@ -93,7 +104,6 @@ struct dir * fs_find_dir_info(struct superblock *sb, const char *dpath) {
 	strcpy(pathcopy, dpath);
 
 	uint64_t dirnode, nodeblock, j;
-	struct dir *dir              = malloc(sizeof *dir); 
 	struct inode *inode          = malloc(sb->blksz);
 	struct inode *auxinode       = malloc(sb->blksz);
 	struct nodeinfo *nodeinfo    = malloc(sb->blksz);
@@ -108,11 +118,8 @@ struct dir * fs_find_dir_info(struct superblock *sb, const char *dpath) {
 	j = 0;
 
 	for(int i = 0; i < pathlenght; i++) {
-		printf("LINK_MAX %lu\n", LINK_MAX);
 		while(j < LINK_MAX) {
-			//printf("j: %llu\n", j);
 			nodeblock = inode->links[j];
-			//printf("Nodeblock %llu\n", nodeblock);
 			if(nodeblock != 0) {
 				fs_read_data(sb, nodeblock, (void*) auxinode);
 				fs_read_data(sb, auxinode->meta, (void*) auxnodeinfo);
@@ -129,14 +136,13 @@ struct dir * fs_find_dir_info(struct superblock *sb, const char *dpath) {
 
 			if(j == LINK_MAX) {
 				if(inode->next != 0) { /* Restarts loop with child inode */
-					printf("inode->next != 0\n");
 					j = 0;
 					fs_read_data(sb, inode->next, (void*)inode);
 				}
 				else{ 
 					if(i + 1 == pathlenght) {
 						nodeblock = -1; /* Ends while without finding file */
-						printf("nodeblock = -1\n");
+						break;
 					}
 					else { /* Error: Path doesn't exists */
 						errno = ENOENT;
@@ -145,22 +151,17 @@ struct dir * fs_find_dir_info(struct superblock *sb, const char *dpath) {
 				}
 			}
 		}
+		j = 0;
 		token = strtok(NULL, "/");
 	}
-
 
 	dir->dirnode = dirnode;
 	dir->nodeblock = nodeblock;
 	dir->nodename = malloc(NAME_MAX);
-	printf("Nodename %s\n", nodename);
 	strcpy(dir->nodename, nodename);
 
-	free(nodename);
-	free(pathcopy);
 	free(inode);
-	free(auxinode);
 	free(nodeinfo);
-	free(auxnodeinfo);
 
 	return dir;
 }
@@ -172,7 +173,7 @@ struct link * fs_find_link(struct superblock *sb, uint64_t inodeblk, uint64_t li
 	int i = 0;
 	uint64_t actualblk = inodeblk;
 	struct link *link = malloc(sizeof *link);
-	struct inode *inode = malloc(sizeof *inode);
+	struct inode *inode = malloc(sb->blksz);
 
 	fs_read_data(sb, inodeblk, (void*) inode);
 
@@ -198,8 +199,6 @@ struct link * fs_find_link(struct superblock *sb, uint64_t inodeblk, uint64_t li
 			}
 		}
 	}
-
-	printf("linknode %llu - linkdex %d\n", link->inode, link->index);
 
 	free(inode);
 
@@ -392,22 +391,14 @@ uint64_t fs_get_block(struct superblock *sb) {
 		return 0;
 	}
 
-   // printf("GET_BLOCK sb->freeblks %llu - sb->freelist %llu\n", sb->freeblks, sb->freelist);
-
 	uint64_t ret;
 
-	//printf("BP1\n");
-
 	struct freepage *freepage = malloc(sb->blksz);
-
-	//printf("BP2\n");
 
 	fs_read_data(sb, sb->freelist, (void*) freepage);
 
 	ret = sb->freelist;
 	sb->freeblks--;
-
-//	printf("Freepage->next: %llu\n", freepage->next);
 	sb->freelist = freepage->next;
 
 	fs_write_data(sb, 0, (void*) sb);
@@ -419,8 +410,6 @@ uint64_t fs_get_block(struct superblock *sb) {
 
 int fs_put_block(struct superblock *sb, uint64_t block) {
 	struct freepage *freepage = malloc(sb->blksz);
-
-//	printf("PUT_BLOCK(%d) sb->freeblks %llu - sb->freelist %llu\n", block, sb->freeblks, sb->freelist);
 
 	freepage->next  = sb->freelist;
 	freepage->count = 0;
@@ -462,29 +451,16 @@ int fs_write_file(struct superblock *sb, const char *fname, char *buf, size_t cn
 		fs_unlink(sb, fname);
 	}
 
-//	printf("DIRNODE %d\n", dir->dirnode);
-
 	link = fs_find_link(sb, dir->dirnode, 0);
-/*
-	printf("BP1\n");
-
-	struct freepage *freepage = malloc(sb->blksz);
-
-	lseek(sb->fd, 4095 * sb->blksz, SEEK_SET);
-	read(sb->fd, freepage, sb->blksz);
-
-	printf("BP2\n");
-*/
 
 	neededblks = datablks + 2 + extrainodes + (link->index == -1 ? 1 : 0);
+
 	if(neededblks > sb->freeblks) {
 		errno = ENOSPC;
 		return -1;
 	}
 
 	fileblk = fs_get_block(sb);
-
-	printf("BREAKPOINT GETBLOCK\n");
 
 	if(link->index == -1) { /* If no link exists, create child of dirnode to store it */
 		fs_add_link(sb, fs_create_child(sb, link->inode, dir->dirnode), 0, fileblk);
@@ -502,23 +478,33 @@ int fs_write_file(struct superblock *sb, const char *fname, char *buf, size_t cn
 
 	links = (datablks > LINK_MAX) ? LINK_MAX : datablks;
 	for(int i = 0; i < LINK_MAX; i++) {
-		linkblk = fs_get_block(sb);
-		fs_write_data(sb, linkblk, (void*) (buf + i * sb->blksz));
-		inode->links[i] = (i < links) ? linkblk : 0;
+		if(i < links) {
+			linkblk = fs_get_block(sb);
+			fs_write_data(sb, linkblk, (void*) (buf + i * sb->blksz));
+			inode->links[i] = linkblk;
+		}
+		else{
+			inode->links[i] = 0;
+		}
 	}
 	datablks -= links;
 
 	previousblk = fileblk;
-	for(int i = 1; i <= extrainodes; i++) {
+	for(int i = 0; i < extrainodes; i++) {
 		previousblk = fs_create_child(sb, previousblk, fileblk);
 
 		fs_read_data(sb, previousblk, (void*) childnode);
 
 		links = (datablks > LINK_MAX) ? LINK_MAX : datablks;
-		for(int j = 0; j < links; j++) {
-			linkblk = fs_get_block(sb);
-			fs_write_data(sb, linkblk, (void*) (buf + i * j * sb->blksz));
-			childnode->links[j] = linkblk;
+		for(int j = 0; j < LINK_MAX; j++) {
+			if(j < links) {
+				linkblk = fs_get_block(sb);
+				fs_write_data(sb, linkblk, (void*) (buf + i * j * sb->blksz));
+				childnode->links[j] = linkblk;
+			}
+			else{
+				childnode->links[j] = 0;
+			}
 		}
 		fs_write_data(sb, previousblk, (void*) childnode);
 		datablks -= links;
@@ -611,6 +597,7 @@ int fs_unlink(struct superblock *sb, const char *fname) {
 	numblks -= numlinks;
 	nextblk = inode->next;
 	fs_put_block(sb, dir->nodeblock);
+	fs_put_block(sb, inode->meta);
 
 	while(nextblk != 0) {
 		fs_read_data(sb, nextblk, inode);
@@ -624,6 +611,7 @@ int fs_unlink(struct superblock *sb, const char *fname) {
 		numblks -= numlinks;
 
 		fs_put_block(sb, thisblk);
+		fs_put_block(sb, inode->meta);
 	}
 
 	/* Remove parent link to file */
@@ -722,6 +710,7 @@ int fs_rmdir(struct superblock *sb, const char *dname) {
 	}	
 
 	fs_put_block(sb, dir->nodeblock);
+	fs_put_block(sb, inode->meta);
 
 	link = fs_find_link(sb, dir->dirnode, dir->nodeblock);
 
@@ -736,7 +725,7 @@ int fs_rmdir(struct superblock *sb, const char *dname) {
 }
 
 char * fs_list_dir(struct superblock *sb, const char *dname) {
-	char *ret = "";
+	char *ret = malloc(NAME_MAX);
 	uint64_t elements, size;
 	struct dir *dir;
 	struct inode *inode          = malloc(sb->blksz);
@@ -744,6 +733,7 @@ char * fs_list_dir(struct superblock *sb, const char *dname) {
 	struct nodeinfo *nodeinfo    = malloc(sb->blksz);
 	struct nodeinfo *auxnodeinfo = malloc(sb->blksz);
 
+	strcpy(ret, "");
 	dir = fs_find_dir_info(sb, dname);
 
 	if(dir == NULL) {
@@ -760,26 +750,6 @@ char * fs_list_dir(struct superblock *sb, const char *dname) {
 
 	if(nodeinfo->size == 0) {
 		return ret;
-	}
-
-	for(int i = 0; i < LINK_MAX; i++) {
-		if(inode->links[i] != 0) {
-			fs_read_data(sb, inode->links[i], (void*) auxinode);
-			fs_read_data(sb, auxinode->meta, (void*) auxnodeinfo);
-
-			strcat(ret, auxnodeinfo->name);
-			if(auxinode->mode == IMDIR) strcat(ret, "/");
-			strcat(ret, " ");
-
-			elements++;
-
-			if(elements == nodeinfo->size) {
-				free(dir);
-				free(inode);
-				free(nodeinfo);
-				return ret;
-			}
-		}
 	}
 
 	elements = 0;
