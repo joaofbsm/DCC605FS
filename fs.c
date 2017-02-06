@@ -23,12 +23,9 @@
  - Find and delete inode for links that are completely unused(if IMCHILD and inode->next == 0 and all links == 0 then putblock and remove reference to inode->meta(previous block) reference to it)
  - Check if dir is root in rmdir(compare with sb->root)
  - Check find_dir_info behaviour with root
- - Add free to every error return case
  - Check TODOs throughout the code
  - Check if node is IMDIR in unlink
  - unlink should look in all the links and check if link == 0
- - UNLINK NOT FREEING DATA BLOCKS
- - RMDIR NOT FREEING NODEINFO
 
 */
 
@@ -144,6 +141,11 @@ struct dir * fs_find_dir_info(struct superblock *sb, const char *dpath) {
 						break;
 					}
 					else { /* Error: Path doesn't exists */
+						free(dir);
+						free(nodename);
+						free(pathcopy);
+						free(inode);
+						free(nodeinfo);
 						errno = ENOENT;
 						return NULL;
 					}
@@ -159,6 +161,8 @@ struct dir * fs_find_dir_info(struct superblock *sb, const char *dpath) {
 	dir->nodename = malloc(NAME_MAX);
 	strcpy(dir->nodename, nodename);
 
+	free(nodename);
+	free(pathcopy);
 	free(inode);
 	free(nodeinfo);
 
@@ -453,6 +457,10 @@ int fs_write_file(struct superblock *sb, const char *fname, char *buf, size_t cn
 	dir = fs_find_dir_info(sb, fname);
 
 	if(dir == NULL) { /* Path not found */
+		free(dir);
+		free(inode);
+		free(childnode);
+		free(nodeinfo);
 		return -1;
 	}
 
@@ -465,6 +473,11 @@ int fs_write_file(struct superblock *sb, const char *fname, char *buf, size_t cn
 	neededblks = datablks + 2 + extrainodes + (link->index == -1 ? 1 : 0);
 
 	if(neededblks > sb->freeblks) {
+		free(dir);
+		free(link);
+		free(inode);
+		free(childnode);
+		free(nodeinfo);
 		errno = ENOSPC;
 		return -1;
 	}
@@ -536,13 +549,16 @@ int fs_write_file(struct superblock *sb, const char *fname, char *buf, size_t cn
 
 ssize_t fs_read_file(struct superblock *sb, const char *fname, char *buf, size_t bufsz) {
 	size_t numblks;
-	struct dir *dir = malloc(sizeof *dir);
+	struct dir *dir;
 	struct inode *inode = malloc(sb->blksz);
 	struct nodeinfo *nodeinfo = malloc(sb->blksz);
 
 	dir = fs_find_dir_info(sb, fname);
 
 	if(dir->nodeblock == -1) {
+		free(dir);
+		free(inode);
+		free(nodeinfo);
 		errno = ENOENT;
 		return -1;
 	}
@@ -551,6 +567,9 @@ ssize_t fs_read_file(struct superblock *sb, const char *fname, char *buf, size_t
 	fs_read_data(sb, inode->meta, (void*) nodeinfo);
 
 	if(inode->mode != IMREG) {
+		free(dir);
+		free(inode);
+		free(nodeinfo);
 		errno = EISDIR;
 		return -1;
 	}
@@ -565,6 +584,9 @@ ssize_t fs_read_file(struct superblock *sb, const char *fname, char *buf, size_t
 				fs_read_data(sb, inode->next, (void*) inode);
 			}
 			else {
+				free(dir);
+				free(inode);
+				free(nodeinfo);
 				errno = EPERM;
 				return -1;
 			}
@@ -590,6 +612,9 @@ int fs_unlink(struct superblock *sb, const char *fname) {
 	dir = fs_find_dir_info(sb, fname);
 
 	if(dir->nodeblock == -1) {
+		free(dir);
+		free(inode);
+		free(nodeinfo);
 		errno = ENOENT;
 		return -1;
 	}
@@ -646,10 +671,16 @@ int fs_mkdir(struct superblock *sb, const char *dname) {
 	dir = fs_find_dir_info(sb, dname);
 
 	if(dir == NULL) {
+		free(dir);
+		free(inode);
+		free(nodeinfo);
 		return -1;
 	}
 
 	if(dir->nodeblock != -1) {
+		free(dir);
+		free(inode);
+		free(nodeinfo);
 		errno = EEXIST;
 		return -1;
 	}
@@ -657,6 +688,10 @@ int fs_mkdir(struct superblock *sb, const char *dname) {
 	link = fs_find_link(sb, dir->dirnode, 0);
 
 	if((sb->freeblks < (2 + (link->index == -1 ? 1 : 0)))) {
+		free(dir);
+		free(link);
+		free(inode);
+		free(nodeinfo);
 		errno = ENOSPC;
 		return -1;
 	}
@@ -702,6 +737,9 @@ int fs_rmdir(struct superblock *sb, const char *dname) {
 	dir = fs_find_dir_info(sb, dname);
 
 	if(dir == NULL) {
+		free(dir);
+		free(inode);
+		free(nodeinfo);
 		return -1;
 	}
 
@@ -709,11 +747,17 @@ int fs_rmdir(struct superblock *sb, const char *dname) {
 	fs_read_data(sb, inode->meta, (void*) nodeinfo);
 
 	if(inode->mode != IMDIR) {
+		free(dir);
+		free(inode);
+		free(nodeinfo);
 		errno = ENOTDIR;
 		return -1;
 	}
 
 	if(nodeinfo->size) {
+		free(dir);
+		free(inode);
+		free(nodeinfo);
 		errno = ENOTEMPTY;
 		return -1;
 	}	
@@ -746,6 +790,11 @@ char * fs_list_dir(struct superblock *sb, const char *dname) {
 	dir = fs_find_dir_info(sb, dname);
 
 	if(dir == NULL) {
+		free(dir);
+		free(inode);
+		free(auxinode);
+		free(nodeinfo);
+		free(auxnodeinfo);
 		return NULL;
 	}
 
@@ -753,11 +802,21 @@ char * fs_list_dir(struct superblock *sb, const char *dname) {
 	fs_read_data(sb, inode->meta, (void*) nodeinfo);
 
 	if(inode->mode != IMDIR) {
+		free(dir);
+		free(inode);
+		free(auxinode);
+		free(nodeinfo);
+		free(auxnodeinfo);
 		errno = ENOTDIR;
 		return NULL;
 	}
 
 	if(nodeinfo->size == 0) {
+		free(dir);
+		free(inode);
+		free(auxinode);
+		free(nodeinfo);
+		free(auxnodeinfo);
 		return ret;
 	}
 
