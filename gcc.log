@@ -2985,3 +2985,142 @@ fs.c:83:8: warning: ‘pathcopy’ is used uninitialized in this function [-Wuni
 fs.c:87:9: warning: ‘nodename’ may be used uninitialized in this function [-Wmaybe-uninitialized]
    strcpy(nodename, token);
          ^
+fs.c: In function ‘procuraDiretorio’:
+fs.c:39:29: warning: unused variable ‘strAux2’ [-Wunused-variable]
+  char *fnameCopy, *strAux, *strAux2;
+                             ^
+fs.c: In function ‘fs_open’:
+fs.c:214:3: warning: ‘return’ with no value, in function returning non-void [enabled by default]
+   return;
+   ^
+fs.c: In function ‘fs_read_file’:
+fs.c:425:35: warning: unused variable ‘dirInodeInfo’ [-Wunused-variable]
+  struct nodeinfo *fileInodeInfo, *dirInodeInfo;
+                                   ^
+fs.c:424:28: warning: unused variable ‘dirInode’ [-Wunused-variable]
+  struct inode *fileInode, *dirInode;
+                            ^
+fs.c:422:19: warning: unused variable ‘bytecnt’ [-Wunused-variable]
+  size_t bytesleft,bytecnt, i, blockFiles;
+                   ^
+fs.c:422:9: warning: unused variable ‘bytesleft’ [-Wunused-variable]
+  size_t bytesleft,bytecnt, i, blockFiles;
+         ^
+fs.c: In function ‘fs_rmdir’:
+fs.c:644:20: warning: unused variable ‘strRetorno’ [-Wunused-variable]
+  char *fnameCopy, *strRetorno;
+                    ^
+fs.c:644:8: warning: unused variable ‘fnameCopy’ [-Wunused-variable]
+  char *fnameCopy, *strRetorno;
+        ^
+fs.c:742:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘procuraDiretorio’:
+fs.c:39:29: warning: unused variable ‘strAux2’ [-Wunused-variable]
+  char *fnameCopy, *strAux, *strAux2;
+                             ^
+fs.c: In function ‘fs_read_file’:
+fs.c:425:35: warning: unused variable ‘dirInodeInfo’ [-Wunused-variable]
+  struct nodeinfo *fileInodeInfo, *dirInodeInfo;
+                                   ^
+fs.c:424:28: warning: unused variable ‘dirInode’ [-Wunused-variable]
+  struct inode *fileInode, *dirInode;
+                            ^
+fs.c:422:19: warning: unused variable ‘bytecnt’ [-Wunused-variable]
+  size_t bytesleft,bytecnt, i, blockFiles;
+                   ^
+fs.c:422:9: warning: unused variable ‘bytesleft’ [-Wunused-variable]
+  size_t bytesleft,bytecnt, i, blockFiles;
+         ^
+fs.c: In function ‘fs_rmdir’:
+fs.c:644:20: warning: unused variable ‘strRetorno’ [-Wunused-variable]
+  char *fnameCopy, *strRetorno;
+                    ^
+fs.c:644:8: warning: unused variable ‘fnameCopy’ [-Wunused-variable]
+  char *fnameCopy, *strRetorno;
+        ^
+fs.c:742:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘procuraDiretorio’:
+fs.c:39:29: warning: unused variable ‘strAux2’ [-Wunused-variable]
+  char *fnameCopy, *strAux, *strAux2;
+                             ^
+fs.c: In function ‘fs_read_file’:
+fs.c:425:35: warning: unused variable ‘dirInodeInfo’ [-Wunused-variable]
+  struct nodeinfo *fileInodeInfo, *dirInodeInfo;
+                                   ^
+fs.c:424:28: warning: unused variable ‘dirInode’ [-Wunused-variable]
+  struct inode *fileInode, *dirInode;
+                            ^
+fs.c:422:19: warning: unused variable ‘bytecnt’ [-Wunused-variable]
+  size_t bytesleft,bytecnt, i, blockFiles;
+                   ^
+fs.c:422:9: warning: unused variable ‘bytesleft’ [-Wunused-variable]
+  size_t bytesleft,bytecnt, i, blockFiles;
+         ^
+fs.c: In function ‘fs_rmdir’:
+fs.c:644:20: warning: unused variable ‘strRetorno’ [-Wunused-variable]
+  char *fnameCopy, *strRetorno;
+                    ^
+fs.c:644:8: warning: unused variable ‘fnameCopy’ [-Wunused-variable]
+  char *fnameCopy, *strRetorno;
+        ^
+fs.c:742:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘procuraDiretorio’:
+fs.c:39:29: warning: unused variable ‘strAux2’ [-Wunused-variable]
+  char *fnameCopy, *strAux, *strAux2;
+                             ^
+fs.c: In function ‘fs_read_file’:
+fs.c:425:35: warning: unused variable ‘dirInodeInfo’ [-Wunused-variable]
+  struct nodeinfo *fileInodeInfo, *dirInodeInfo;
+                                   ^
+fs.c:424:28: warning: unused variable ‘dirInode’ [-Wunused-variable]
+  struct inode *fileInode, *dirInode;
+                            ^
+fs.c:422:19: warning: unused variable ‘bytecnt’ [-Wunused-variable]
+  size_t bytesleft,bytecnt, i, blockFiles;
+                   ^
+fs.c:422:9: warning: unused variable ‘bytesleft’ [-Wunused-variable]
+  size_t bytesleft,bytecnt, i, blockFiles;
+         ^
+fs.c: In function ‘fs_rmdir’:
+fs.c:644:20: warning: unused variable ‘strRetorno’ [-Wunused-variable]
+  char *fnameCopy, *strRetorno;
+                    ^
+fs.c:644:8: warning: unused variable ‘fnameCopy’ [-Wunused-variable]
+  char *fnameCopy, *strRetorno;
+        ^
+fs.c:742:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘procuraDiretorio’:
+fs.c:39:29: warning: unused variable ‘strAux2’ [-Wunused-variable]
+  char *fnameCopy, *strAux, *strAux2;
+                             ^
+fs.c: In function ‘fs_read_file’:
+fs.c:425:35: warning: unused variable ‘dirInodeInfo’ [-Wunused-variable]
+  struct nodeinfo *fileInodeInfo, *dirInodeInfo;
+                                   ^
+fs.c:424:28: warning: unused variable ‘dirInode’ [-Wunused-variable]
+  struct inode *fileInode, *dirInode;
+                            ^
+fs.c:422:19: warning: unused variable ‘bytecnt’ [-Wunused-variable]
+  size_t bytesleft,bytecnt, i, blockFiles;
+                   ^
+fs.c:422:9: warning: unused variable ‘bytesleft’ [-Wunused-variable]
+  size_t bytesleft,bytecnt, i, blockFiles;
+         ^
+fs.c: In function ‘fs_rmdir’:
+fs.c:644:20: warning: unused variable ‘strRetorno’ [-Wunused-variable]
+  char *fnameCopy, *strRetorno;
+                    ^
+fs.c:644:8: warning: unused variable ‘fnameCopy’ [-Wunused-variable]
+  char *fnameCopy, *strRetorno;
+        ^
+fs.c:742:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^

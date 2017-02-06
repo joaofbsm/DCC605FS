@@ -36,17 +36,16 @@
 *       UTILITIES       * 
 ************************/
 
-struct link {
-  uint64_t inode;
-  int index;
-};
-
 struct dir {
 	uint64_t dirnode;   /* Dir inode corresponding block            */
 	uint64_t nodeblock; /* The requested inode block, if it exists  */
 	char *nodename;     /* Name of the requested inode, file or dir */
 };
 
+struct link {
+	uint64_t inode;
+	int index;
+};
 
 int get_file_size(const char *fname) {
 	int sz;
@@ -391,6 +390,11 @@ uint64_t fs_get_block(struct superblock *sb) {
 		return 0;
 	}
 
+	if(sb->magic != 0xdcc605f5) {
+		errno = EBADF;
+		return (uint64_t) -1;
+	}
+
 	uint64_t ret;
 
 	struct freepage *freepage = malloc(sb->blksz);
@@ -409,6 +413,11 @@ uint64_t fs_get_block(struct superblock *sb) {
 }
 
 int fs_put_block(struct superblock *sb, uint64_t block) {
+	if(sb->magic != 0xdcc605f5) {
+		errno = EBADF;
+		return -1;
+	}
+
 	struct freepage *freepage = malloc(sb->blksz);
 
 	freepage->next  = sb->freelist;
