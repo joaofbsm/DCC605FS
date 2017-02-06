@@ -1,0 +1,85 @@
+int fs_write_file(struct superblock *sb, const char *fname, char *buf, size_t cnt) {
+	uint64_t datablks, extrainodes, neededblks, links;
+	uint64_t fileblk, previousblk, linkblk;
+	struct dir *dir;
+	struct link *link;
+	struct inode *inode       = malloc(sb->blksz);
+	struct inode *childnode   = malloc(sb->blksz);
+	struct nodeinfo *nodeinfo = malloc(sb->blksz);
+
+	datablks = (cnt / sb->blksz) + ((cnt % sb->blksz) ? 1 : 0); /* Blocks needed for data */
+	extrainodes = 0; /* Child inodes needed to store all the links to blocks */
+
+	if(datablks > LINK_MAX) {
+		extrainodes = (datablks / LINK_MAX) + (datablks % LINK_MAX ? 1 : 0);
+	}
+
+	dir = fs_find_dir_info(sb, fname);
+
+	if(dir == NULL) { /* Path not found */
+		return -1;
+	}
+
+	if(dir->nodeblock != -1) {
+		fs_unlink(sb, fname);
+	} 
+
+	link = fs_find_link(sb, dir->dirnode, 0);
+
+	neededblks = datablks + 2 + extrainodes + (link->index == -1 ? 1 : 0);
+	if(neededblks > sb->freeblks) {
+		errno = ENOSPC;
+		return -1;
+	}
+
+	fileblk = fs_get_block(sb);
+
+	if(link->index == -1) {
+		fs_add_link(sb, fs_create_child(sb, link->inode, dir->dirnode), 0, fileblk);
+	}
+	else {
+		fs_add_link(sb, link->inode, link->index, fileblk);
+	}
+
+	inode->mode   = IMREG;
+	inode->parent = dir->dirnode;
+	inode->meta   = fs_get_block(sb);
+
+	links = (datablks > LINK_MAX) ? LINK_MAX : datablks;
+	for(int i = 0; i < LINK_MAX; i++) {
+		linkblk = fs_get_block(sb);
+		fs_write_data(sb, linkblk, (void*) (buf + i * sb->blksz));
+		inode->links[i] = (i < links) ? linkblk : 0;
+	}
+	datablks -= links;
+
+	previousblk = fileblk;
+	for(int i = 1; i <= extrainodes; i++) {
+		previousblk = fs_create_child(sb, previousblk, fileblk);
+
+		fs_read_data(sb, previousblk, (void*) childnode);
+
+		links = (datablks > LINK_MAX) ? LINK_MAX : datablks;
+		for(int j = 0; j < links; j++) {
+			linkblk = fs_get_block(sb);
+			fs_write_data(sb, linkblk, (void*) (buf + i * j * sb->blksz));
+			childnode->links[j] = linkblk;
+		}
+		fs_write_data(sb, previousblk, (void*) childnode);
+		datablks -= links;
+	}
+
+	nodeinfo->size = cnt;
+	strcpy(nodeinfo->name, dir->nodename);
+
+	fs_write_data(sb, fileblk, (void*) inode);
+	fs_write_data(sb, inode->meta, (void*) nodeinfo);
+
+	free(dir);
+	free(link);
+	free(inode);
+	free(childnode);
+	free(nodeinfo);
+
+	return 0;
+}

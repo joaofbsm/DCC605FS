@@ -2699,3 +2699,289 @@ fs.c:82:8: warning: ‘pathcopy’ is used uninitialized in this function [-Wuni
 fs.c:86:9: warning: ‘nodename’ may be used uninitialized in this function [-Wmaybe-uninitialized]
    strcpy(nodename, token);
          ^
+fs.c: In function ‘fs_find_dir_info’:
+fs.c:93:6: warning: unused variable ‘iterations’ [-Wunused-variable]
+  int iterations;
+      ^
+fs.c:82:8: warning: ‘pathcopy’ is used uninitialized in this function [-Wuninitialized]
+  strcpy(pathcopy, dpath);
+        ^
+fs.c:86:9: warning: ‘nodename’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+   strcpy(nodename, token);
+         ^
+fs.c: In function ‘fs_find_dir_info’:
+fs.c:93:6: warning: unused variable ‘iterations’ [-Wunused-variable]
+  int iterations;
+      ^
+fs.c:82:8: warning: ‘pathcopy’ is used uninitialized in this function [-Wuninitialized]
+  strcpy(pathcopy, dpath);
+        ^
+fs.c:86:9: warning: ‘nodename’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+   strcpy(nodename, token);
+         ^
+fs.c: In function ‘procuraDiretorio’:
+fs.c:38:29: warning: unused variable ‘strAux2’ [-Wunused-variable]
+  char *fnameCopy, *strAux, *strAux2;
+                             ^
+fs.c: In function ‘openDisk’:
+fs.c:140:2: warning: implicit declaration of function ‘flock’ [-Wimplicit-function-declaration]
+  if(flock(sb->fd, LOCK_EX|LOCK_NB)==-1){
+  ^
+fs.c:140:19: error: ‘LOCK_EX’ undeclared (first use in this function)
+  if(flock(sb->fd, LOCK_EX|LOCK_NB)==-1){
+                   ^
+fs.c:140:19: note: each undeclared identifier is reported only once for each function it appears in
+fs.c:140:27: error: ‘LOCK_NB’ undeclared (first use in this function)
+  if(flock(sb->fd, LOCK_EX|LOCK_NB)==-1){
+                           ^
+fs.c: In function ‘fs_format’:
+fs.c:155:3: warning: ‘return’ with no value, in function returning non-void [enabled by default]
+   return;
+   ^
+fs.c: In function ‘fs_open’:
+fs.c:213:3: warning: ‘return’ with no value, in function returning non-void [enabled by default]
+   return;
+   ^
+fs.c:222:17: error: ‘LOCK_UN’ undeclared (first use in this function)
+   flock(sb->fd, LOCK_UN);
+                 ^
+fs.c: In function ‘fs_close’:
+fs.c:242:16: error: ‘LOCK_UN’ undeclared (first use in this function)
+  flock(sb->fd, LOCK_UN);
+                ^
+fs.c: In function ‘fs_read_file’:
+fs.c:424:35: warning: unused variable ‘dirInodeInfo’ [-Wunused-variable]
+  struct nodeinfo *fileInodeInfo, *dirInodeInfo;
+                                   ^
+fs.c:423:28: warning: unused variable ‘dirInode’ [-Wunused-variable]
+  struct inode *fileInode, *dirInode;
+                            ^
+fs.c:421:19: warning: unused variable ‘bytecnt’ [-Wunused-variable]
+  size_t bytesleft,bytecnt, i, blockFiles;
+                   ^
+fs.c:421:9: warning: unused variable ‘bytesleft’ [-Wunused-variable]
+  size_t bytesleft,bytecnt, i, blockFiles;
+         ^
+fs.c: In function ‘fs_rmdir’:
+fs.c:643:20: warning: unused variable ‘strRetorno’ [-Wunused-variable]
+  char *fnameCopy, *strRetorno;
+                    ^
+fs.c:643:8: warning: unused variable ‘fnameCopy’ [-Wunused-variable]
+  char *fnameCopy, *strRetorno;
+        ^
+fs.c:741:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+gcc: error: fs.o: No such file or directory
+gcc: error: fs.o: No such file or directory
+gcc: error: fs.o: No such file or directory
+gcc: error: fs.o: No such file or directory
+fs.c: In function ‘procuraDiretorio’:
+fs.c:38:29: warning: unused variable ‘strAux2’ [-Wunused-variable]
+  char *fnameCopy, *strAux, *strAux2;
+                             ^
+fs.c: In function ‘openDisk’:
+fs.c:140:2: warning: implicit declaration of function ‘flock’ [-Wimplicit-function-declaration]
+  if(flock(sb->fd, LOCK_EX|LOCK_NB)==-1){
+  ^
+fs.c:140:19: error: ‘LOCK_EX’ undeclared (first use in this function)
+  if(flock(sb->fd, LOCK_EX|LOCK_NB)==-1){
+                   ^
+fs.c:140:19: note: each undeclared identifier is reported only once for each function it appears in
+fs.c:140:27: error: ‘LOCK_NB’ undeclared (first use in this function)
+  if(flock(sb->fd, LOCK_EX|LOCK_NB)==-1){
+                           ^
+fs.c: In function ‘fs_format’:
+fs.c:155:3: warning: ‘return’ with no value, in function returning non-void [enabled by default]
+   return;
+   ^
+fs.c: In function ‘fs_open’:
+fs.c:213:3: warning: ‘return’ with no value, in function returning non-void [enabled by default]
+   return;
+   ^
+fs.c:222:17: error: ‘LOCK_UN’ undeclared (first use in this function)
+   flock(sb->fd, LOCK_UN);
+                 ^
+fs.c: In function ‘fs_close’:
+fs.c:242:16: error: ‘LOCK_UN’ undeclared (first use in this function)
+  flock(sb->fd, LOCK_UN);
+                ^
+fs.c: In function ‘fs_read_file’:
+fs.c:424:35: warning: unused variable ‘dirInodeInfo’ [-Wunused-variable]
+  struct nodeinfo *fileInodeInfo, *dirInodeInfo;
+                                   ^
+fs.c:423:28: warning: unused variable ‘dirInode’ [-Wunused-variable]
+  struct inode *fileInode, *dirInode;
+                            ^
+fs.c:421:19: warning: unused variable ‘bytecnt’ [-Wunused-variable]
+  size_t bytesleft,bytecnt, i, blockFiles;
+                   ^
+fs.c:421:9: warning: unused variable ‘bytesleft’ [-Wunused-variable]
+  size_t bytesleft,bytecnt, i, blockFiles;
+         ^
+fs.c: In function ‘fs_rmdir’:
+fs.c:643:20: warning: unused variable ‘strRetorno’ [-Wunused-variable]
+  char *fnameCopy, *strRetorno;
+                    ^
+fs.c:643:8: warning: unused variable ‘fnameCopy’ [-Wunused-variable]
+  char *fnameCopy, *strRetorno;
+        ^
+fs.c:741:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+gcc: error: fs.o: No such file or directory
+fs.c: In function ‘procuraDiretorio’:
+fs.c:38:29: warning: unused variable ‘strAux2’ [-Wunused-variable]
+  char *fnameCopy, *strAux, *strAux2;
+                             ^
+fs.c: In function ‘openDisk’:
+fs.c:140:2: warning: implicit declaration of function ‘flock’ [-Wimplicit-function-declaration]
+  if(flock(sb->fd, LOCK_EX|LOCK_NB)==-1){
+  ^
+fs.c:140:19: error: ‘LOCK_EX’ undeclared (first use in this function)
+  if(flock(sb->fd, LOCK_EX|LOCK_NB)==-1){
+                   ^
+fs.c:140:19: note: each undeclared identifier is reported only once for each function it appears in
+fs.c:140:27: error: ‘LOCK_NB’ undeclared (first use in this function)
+  if(flock(sb->fd, LOCK_EX|LOCK_NB)==-1){
+                           ^
+fs.c: In function ‘fs_format’:
+fs.c:155:3: warning: ‘return’ with no value, in function returning non-void [enabled by default]
+   return;
+   ^
+fs.c: In function ‘fs_open’:
+fs.c:213:3: warning: ‘return’ with no value, in function returning non-void [enabled by default]
+   return;
+   ^
+fs.c:222:17: error: ‘LOCK_UN’ undeclared (first use in this function)
+   flock(sb->fd, LOCK_UN);
+                 ^
+fs.c: In function ‘fs_close’:
+fs.c:242:16: error: ‘LOCK_UN’ undeclared (first use in this function)
+  flock(sb->fd, LOCK_UN);
+                ^
+fs.c: In function ‘fs_read_file’:
+fs.c:424:35: warning: unused variable ‘dirInodeInfo’ [-Wunused-variable]
+  struct nodeinfo *fileInodeInfo, *dirInodeInfo;
+                                   ^
+fs.c:423:28: warning: unused variable ‘dirInode’ [-Wunused-variable]
+  struct inode *fileInode, *dirInode;
+                            ^
+fs.c:421:19: warning: unused variable ‘bytecnt’ [-Wunused-variable]
+  size_t bytesleft,bytecnt, i, blockFiles;
+                   ^
+fs.c:421:9: warning: unused variable ‘bytesleft’ [-Wunused-variable]
+  size_t bytesleft,bytecnt, i, blockFiles;
+         ^
+fs.c: In function ‘fs_rmdir’:
+fs.c:643:20: warning: unused variable ‘strRetorno’ [-Wunused-variable]
+  char *fnameCopy, *strRetorno;
+                    ^
+fs.c:643:8: warning: unused variable ‘fnameCopy’ [-Wunused-variable]
+  char *fnameCopy, *strRetorno;
+        ^
+fs.c:741:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+gcc: error: fs.o: No such file or directory
+fs.c: In function ‘procuraDiretorio’:
+fs.c:39:29: warning: unused variable ‘strAux2’ [-Wunused-variable]
+  char *fnameCopy, *strAux, *strAux2;
+                             ^
+fs.c: In function ‘fs_open’:
+fs.c:214:3: warning: ‘return’ with no value, in function returning non-void [enabled by default]
+   return;
+   ^
+fs.c: In function ‘fs_read_file’:
+fs.c:425:35: warning: unused variable ‘dirInodeInfo’ [-Wunused-variable]
+  struct nodeinfo *fileInodeInfo, *dirInodeInfo;
+                                   ^
+fs.c:424:28: warning: unused variable ‘dirInode’ [-Wunused-variable]
+  struct inode *fileInode, *dirInode;
+                            ^
+fs.c:422:19: warning: unused variable ‘bytecnt’ [-Wunused-variable]
+  size_t bytesleft,bytecnt, i, blockFiles;
+                   ^
+fs.c:422:9: warning: unused variable ‘bytesleft’ [-Wunused-variable]
+  size_t bytesleft,bytecnt, i, blockFiles;
+         ^
+fs.c: In function ‘fs_rmdir’:
+fs.c:644:20: warning: unused variable ‘strRetorno’ [-Wunused-variable]
+  char *fnameCopy, *strRetorno;
+                    ^
+fs.c:644:8: warning: unused variable ‘fnameCopy’ [-Wunused-variable]
+  char *fnameCopy, *strRetorno;
+        ^
+fs.c:742:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+fs.c: In function ‘fs_find_dir_info’:
+fs.c:94:6: warning: unused variable ‘iterations’ [-Wunused-variable]
+  int iterations;
+      ^
+fs.c:83:8: warning: ‘pathcopy’ is used uninitialized in this function [-Wuninitialized]
+  strcpy(pathcopy, dpath);
+        ^
+fs.c:87:9: warning: ‘nodename’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+   strcpy(nodename, token);
+         ^
+fs.c: In function ‘fs_find_dir_info’:
+fs.c:94:6: warning: unused variable ‘iterations’ [-Wunused-variable]
+  int iterations;
+      ^
+fs.c:83:8: warning: ‘pathcopy’ is used uninitialized in this function [-Wuninitialized]
+  strcpy(pathcopy, dpath);
+        ^
+fs.c:87:9: warning: ‘nodename’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+   strcpy(nodename, token);
+         ^
+fs.c: In function ‘fs_find_dir_info’:
+fs.c:94:6: warning: unused variable ‘iterations’ [-Wunused-variable]
+  int iterations;
+      ^
+fs.c:83:8: warning: ‘pathcopy’ is used uninitialized in this function [-Wuninitialized]
+  strcpy(pathcopy, dpath);
+        ^
+fs.c:87:9: warning: ‘nodename’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+   strcpy(nodename, token);
+         ^
+fs.c: In function ‘fs_find_dir_info’:
+fs.c:94:6: warning: unused variable ‘iterations’ [-Wunused-variable]
+  int iterations;
+      ^
+fs.c:83:8: warning: ‘pathcopy’ is used uninitialized in this function [-Wuninitialized]
+  strcpy(pathcopy, dpath);
+        ^
+fs.c:87:9: warning: ‘nodename’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+   strcpy(nodename, token);
+         ^
+fs.c: In function ‘fs_find_dir_info’:
+fs.c:94:6: warning: unused variable ‘iterations’ [-Wunused-variable]
+  int iterations;
+      ^
+fs.c:83:8: warning: ‘pathcopy’ is used uninitialized in this function [-Wuninitialized]
+  strcpy(pathcopy, dpath);
+        ^
+fs.c:87:9: warning: ‘nodename’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+   strcpy(nodename, token);
+         ^
+fs.c: In function ‘fs_find_dir_info’:
+fs.c:94:6: warning: unused variable ‘iterations’ [-Wunused-variable]
+  int iterations;
+      ^
+fs.c:83:8: warning: ‘pathcopy’ is used uninitialized in this function [-Wuninitialized]
+  strcpy(pathcopy, dpath);
+        ^
+fs.c:87:9: warning: ‘nodename’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+   strcpy(nodename, token);
+         ^
+fs.c: In function ‘fs_find_dir_info’:
+fs.c:94:6: warning: unused variable ‘iterations’ [-Wunused-variable]
+  int iterations;
+      ^
+fs.c:83:8: warning: ‘pathcopy’ is used uninitialized in this function [-Wuninitialized]
+  strcpy(pathcopy, dpath);
+        ^
+fs.c:87:9: warning: ‘nodename’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+   strcpy(nodename, token);
+         ^
