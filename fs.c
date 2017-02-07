@@ -17,21 +17,11 @@
 #define LINK_MAX (sb->blksz - 32) / sizeof(uint64_t)
 #define NAME_MAX sb->blksz - (8 * sizeof(uint64_t))
 
-
-/*
- 
- - Find and delete inode for links that are completely unused(if IMCHILD and inode->next == 0 and all links == 0 then putblock and remove reference to inode->meta(previous block) reference to it)
- - Check if dir is root in rmdir(compare with sb->root)
- - Check find_dir_info behaviour with root
- - Check TODOs throughout the code
- - Check if node is IMDIR in unlink
- - unlink should look in all the links and check if link == 0
-
-*/
-
 /************************
 *       UTILITIES       * 
 ************************/
+
+int fs_has_links(struct superblock *sb, uint64_t thisblk);
 
 struct dir {
 	uint64_t dirnode;   /* Dir inode corresponding block            */
@@ -40,8 +30,8 @@ struct dir {
 };
 
 struct link {
-	uint64_t inode;
-	int index;
+	uint64_t inode; /* inode block that contains the link        */
+	int index;      /* Index of the link in inode array of links */
 };
 
 int get_file_size(const char *fname) {
@@ -238,40 +228,65 @@ uint64_t fs_create_child(struct superblock *sb, uint64_t thisblk, uint64_t paren
 }
 
 void fs_add_link(struct superblock *sb, uint64_t parentblk, int linkindex, uint64_t newlink) {
+	uint64_t nodeinfoblk;
 	struct inode *inode = malloc(sb->blksz);
 	struct nodeinfo *nodeinfo = malloc(sb->blksz);
 
 	fs_read_data(sb, parentblk, (void*) inode);
-	/* TODO SHOULD CHECK IF IM CHILD AND FIND REAL NODEINFO */
-	fs_read_data(sb, inode->meta, (void*) nodeinfo);	
+	nodeinfoblk = inode->meta;
+	if(inode->mode == IMCHILD) {
+		struct inode *parentnode = malloc(sb->blksz);
+		fs_read_data(sb, inode->parent, parentnode);
+		nodeinfoblk = parentnode->meta;
+		free(parentnode);
+	}
+  	fs_read_data(sb, nodeinfoblk, (void*) nodeinfo);	
 
 	inode->links[linkindex] = newlink;
 	nodeinfo->size++;
 
 	fs_write_data(sb, parentblk, (void*) inode);
-	fs_write_data(sb, inode->meta, (void*) nodeinfo);
+	fs_write_data(sb, nodeinfoblk, (void*) nodeinfo);
 
 	free(inode);
 }
 
 void fs_remove_link(struct superblock *sb, uint64_t parentblk, int linkindex) {
+	uint64_t nodeinfoblk;
 	struct inode *inode = malloc(sb->blksz);
 	struct nodeinfo *nodeinfo = malloc(sb->blksz);
 
 	fs_read_data(sb, parentblk, (void*) inode);
-	/* TODO SHOULD CHECK IF IM CHILD AND FIND REAL NODEINFO */
-	fs_read_data(sb, inode->meta, (void*) nodeinfo);
+	nodeinfoblk = inode->meta;
+	if(inode->mode == IMCHILD) {
+		struct inode *parentnode = malloc(sb->blksz);
+		fs_read_data(sb, inode->parent, (void*) parentnode);
+		nodeinfoblk = parentnode->meta;
+		free(parentnode);
+	}
+	fs_read_data(sb, nodeinfoblk, (void*) nodeinfo);
 
 	inode->links[linkindex] = 0;
 	nodeinfo->size--;
 
-	fs_write_data(sb, parentblk, (void*) inode);
-	fs_write_data(sb, inode->meta, (void*) nodeinfo);
+	/* Delete inode for links that are completely unused */
+	if(inode->mode == IMCHILD && inode->next == 0 && !fs_has_links(sb, parentblk)) {
+		fs_put_block(sb, parentblk);
+		struct inode *previousnode = malloc(sb->blksz);
+		fs_read_data(sb, inode->meta, (void*) previousnode);
+		previousnode->next = 0;
+		fs_write_data(sb, inode->meta, (void*) previousnode);
+		free(previousnode);
+	}
+	else {
+		fs_write_data(sb, parentblk, (void*) inode);
+	}
+	fs_write_data(sb, nodeinfoblk, (void*) nodeinfo);
 
 	free(inode);
 }
 
-/* If inode has any links, return 1 */
+/* If inode has any links, return 1, else return 0*/
 int fs_has_links(struct superblock *sb, uint64_t thisblk) {
 	int ret;
 	struct inode *inode = malloc(sb->blksz);
@@ -622,6 +637,13 @@ int fs_unlink(struct superblock *sb, const char *fname) {
 	fs_read_data(sb, dir->nodeblock, (void*) inode);
 	fs_read_data(sb, inode->meta, (void*) nodeinfo);
 
+	if(inode->mode != IMREG) {
+		free(dir);
+		free(inode);
+		free(nodeinfo);
+		errno = ENOENT;
+		return -1;
+	}
 	/* Free all blocks used including the one with the inode */
 	numblks = (nodeinfo->size / sb->blksz) + ((nodeinfo->size % sb->blksz) ? 1 : 0);
 	numlinks = (numblks > LINK_MAX) ? LINK_MAX : numblks;
@@ -740,6 +762,14 @@ int fs_rmdir(struct superblock *sb, const char *dname) {
 		free(dir);
 		free(inode);
 		free(nodeinfo);
+		return -1;
+	}
+
+	if(dir->nodeblock == 1) { /* Trying to remove root */
+		free(dir);
+		free(inode);
+		free(nodeinfo);
+		errno = EBUSY;
 		return -1;
 	}
 

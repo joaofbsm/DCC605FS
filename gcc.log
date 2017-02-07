@@ -3124,3 +3124,72 @@ fs.c:644:8: warning: unused variable ‘fnameCopy’ [-Wunused-variable]
 fs.c:742:1: warning: control reaches end of non-void function [-Wreturn-type]
  }
  ^
+fs.c: In function ‘fs_remove_link’:
+fs.c:261:11: warning: variable ‘nodeinfoblk’ set but not used [-Wunused-but-set-variable]
+  uint64_t nodeinfoblk;
+           ^
+fs.c: In function ‘fs_remove_link’:
+fs.c:261:11: warning: variable ‘nodeinfoblk’ set but not used [-Wunused-but-set-variable]
+  uint64_t nodeinfoblk;
+           ^
+fs.c: In function ‘fs_remove_link’:
+fs.c:261:11: warning: variable ‘nodeinfoblk’ set but not used [-Wunused-but-set-variable]
+  uint64_t nodeinfoblk;
+           ^
+fs.c: In function ‘fs_remove_link’:
+fs.c:261:11: warning: variable ‘nodeinfoblk’ set but not used [-Wunused-but-set-variable]
+  uint64_t nodeinfoblk;
+           ^
+fs.c: In function ‘fs_remove_link’:
+fs.c:261:11: warning: variable ‘nodeinfoblk’ set but not used [-Wunused-but-set-variable]
+  uint64_t nodeinfoblk;
+           ^
+fs.c: In function ‘fs_remove_link’:
+fs.c:261:11: warning: variable ‘nodeinfoblk’ set but not used [-Wunused-but-set-variable]
+  uint64_t nodeinfoblk;
+           ^
+fs.c: In function ‘fs_remove_link’:
+fs.c:278:2: warning: implicit declaration of function ‘fs_has_links’ [-Wimplicit-function-declaration]
+  if(inode->mode == IMCHILD && inode->next == 0 && !fs_has_links(sb, parentblk)) {
+  ^
+fs.c:279:3: warning: implicit declaration of function ‘fs_putblock’ [-Wimplicit-function-declaration]
+   fs_putblock(sb, parentblk);
+   ^
+fs.c:282:3: warning: statement with no effect [-Wunused-value]
+   previousnode->next == 0;
+   ^
+fs.c:284:2: error: expected ‘;’ before ‘}’ token
+  }
+  ^
+gcc: error: fs.o: No such file or directory
+gcc: error: fs.o: No such file or directory
+gcc: error: fs.o: No such file or directory
+gcc: error: fs.o: No such file or directory
+fs.c: In function ‘fs_remove_link’:
+fs.c:278:2: warning: implicit declaration of function ‘fs_has_links’ [-Wimplicit-function-declaration]
+  if(inode->mode == IMCHILD && inode->next == 0 && !fs_has_links(sb, parentblk)) {
+  ^
+fs.c:279:3: warning: implicit declaration of function ‘fs_putblock’ [-Wimplicit-function-declaration]
+   fs_putblock(sb, parentblk);
+   ^
+fs.c:282:3: warning: statement with no effect [-Wunused-value]
+   previousnode->next == 0;
+   ^
+fs.c:284:2: error: expected ‘;’ before ‘}’ token
+  }
+  ^
+gcc: error: fs.o: No such file or directory
+fs.c: In function ‘fs_remove_link’:
+fs.c:278:2: warning: implicit declaration of function ‘fs_has_links’ [-Wimplicit-function-declaration]
+  if(inode->mode == IMCHILD && inode->next == 0 && !fs_has_links(sb, parentblk)) {
+  ^
+fs.c:279:3: warning: implicit declaration of function ‘fs_putblock’ [-Wimplicit-function-declaration]
+   fs_putblock(sb, parentblk);
+   ^
+fs.c:282:3: warning: statement with no effect [-Wunused-value]
+   previousnode->next == 0;
+   ^
+fs.c:284:2: error: expected ‘;’ before ‘}’ token
+  }
+  ^
+gcc: error: fs.o: No such file or directory
